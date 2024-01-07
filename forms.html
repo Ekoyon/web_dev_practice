@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="git.css">
 </head>
 <body>
-<form action="git.html" method="post">
+<form action="replies.html" method="post">
     <div class="name">
         <label for="name">Surname:</label>
         <input type="text" name="name" placeholder="surname" id="name">
@@ -72,6 +72,33 @@
 
         <input type="checkbox" name="food" id="ny">
         <label for="ny">New York</label>
+    </div>
+    <div>
+        <p>Gender:</p>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" name="gender" id="nb" value="nb">
+        <label for="nb">Non-binary</label>
+
+        <input type="radio" name="gender" id="pnts" value="pnts">
+        <label for="pnts">Prefer not to say</label>
+    </div>
+    <label for="hotel">Choose your prefered hotel</label>
+    <select name="diff_hotels" id="hotel">
+        <option value="4 points">4 Points by Sheraton</option>
+        <option value="Sheraton">Sheraton Hotels</option>
+        <option value="Presidential">Hotel Presidential</option>
+        <option value="golden_tulips">Golden Tulips Hotels</option>
+    </select>
+
+    <div class="requests">
+        <label for="requests">If you've got special requests, don't hesitate to tell us:</label>
+        <br>
+        <textarea id="requests" placeholder="tell us how to serve you better" rows="5" cols="30"></textarea>
     </div>
     <button>Submit</button>
 </form>
