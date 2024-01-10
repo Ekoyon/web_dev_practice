@@ -1,4 +1,23 @@
 * {
-    background: coral;
-    color: aqua;
+    background: palevioletred;
+    color: darkblue;
+}
+a {
+    /*font-family: "Bauhaus 93";*/
+    color: darkolivegreen;
+}
+input:focus {
+    background-color: beige;
+    width: 50%
+}
+h1, h2{
+    color: beige;
+}
+button {
+    height: 30%;
+    background-color: indigo;
+    color: darkgray;
+}
+button:focus{
+
 }
