@@ -2,26 +2,36 @@
     background: palevioletred;
     color: darkblue;
 }
+
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
 }
+a:hover {
+    color: #0cc;
+}
+
 input:focus {
     background-color: beige;
     width: 50%
 }
-input[type=radio]:focus{
+
+input[type=radio]:focus {
     background-color: hotpink;
     width: 40%;
 }
-h1, h2{
+
+h1, h2 {
     color: beige;
 }
+
 button {
     height: 30%;
     background-color: indigo;
     color: darkgray;
 }
-button:focus{
 
+button:focus {
+    background-color: rgb(225, 225,225);
+    color: #0f0fff;
 }
