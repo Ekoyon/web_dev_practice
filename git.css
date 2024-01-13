@@ -1,12 +1,16 @@
 * {
     background: palevioletred;
     color: darkblue;
+    /*text-align: center;*/
+    font-family: fantasy;
 }
 
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
+    text-decoration: none;
 }
+
 a:hover {
     color: #0cc;
 }
@@ -23,6 +27,17 @@ input[type=radio]:focus {
 
 h1, h2 {
     color: beige;
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 3em;
+    font-family: Verdana, Georgia, sans-serif;
+}
+h2{
+    font-family: Verdana, sans-serif;
+    font-size: 1.5em;
 }
 
 button {
@@ -32,6 +47,17 @@ button {
 }
 
 button:focus {
-    background-color: rgb(225, 225,225);
+    background-color: rgb(225, 225, 225);
+    color: #0f0fff;
+}
+textarea{
+    width: 20em;
+    height: 8em;
+    color: #0f0fff;
+    border: solid beige 0.2em;
+}
+textarea[placeholder]{
+    font-family: Georgia, sans-serif;
+    font-size: 1rem;
     color: #0f0fff;
 }
