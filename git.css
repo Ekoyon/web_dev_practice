@@ -61,3 +61,17 @@ textarea[placeholder]{
     font-size: 1rem;
     color: #0f0fff;
 }
+
+#age {
+    background-color: darksalmon;
+    color: black;
+}
+
+.wants:hover {
+    text-decoration: wavy yellow underline;
+}
+
+aside ol {
+    background-color: darkolivegreen;
+    color: cornsilk;
+}
