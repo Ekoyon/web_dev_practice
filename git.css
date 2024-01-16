@@ -71,7 +71,14 @@ textarea[placeholder]{
     text-decoration: wavy yellow underline;
 }
 
-aside ol {
+div table {
     background-color: darkolivegreen;
     color: cornsilk;
+}
+form button {
+    text-align: end;
+}
+ol, li{
+    background-color: plum;
+    color: papayawhip;
 }
