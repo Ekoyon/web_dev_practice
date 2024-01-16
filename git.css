@@ -78,7 +78,13 @@ div table {
 form button {
     text-align: end;
 }
-ol, li{
+ol, li {
     background-color: plum;
     color: papayawhip;
+}
+h1 + p{
+    color: papayawhip;
+}
+p > a{
+    color: plum;
 }
