@@ -1,10 +1,12 @@
-* {
+body{
     background: palevioletred;
     color: darkblue;
     /*text-align: center;*/
     font-family: fantasy;
 }
-
+body::selection{
+    background-color: darkolivegreen;
+}
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
@@ -28,7 +30,6 @@ input[type=radio]:focus {
 h1, h2 {
     color: beige;
     text-align: center;
-
 }
 
 h1 {
@@ -39,7 +40,9 @@ h2{
     font-family: Verdana, sans-serif;
     font-size: 1.5em;
 }
-
+h1::first-letter{
+    font-size: 3.5em;
+}
 button {
     height: 30%;
     background-color: indigo;
@@ -87,4 +90,5 @@ h1 + p{
 }
 p > a{
     color: plum;
+    font-weight: bold;
 }
