@@ -6,7 +6,9 @@ body{
 }
 body::selection{
     background-color: darkolivegreen;
+    font-size: medium;
 }
+
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
@@ -15,6 +17,7 @@ a {
 
 a:hover {
     color: #0cc;
+    text-decoration: none;
 }
 
 input:focus {
