@@ -8,7 +8,10 @@ body::selection{
     background-color: darkolivegreen;
     font-size: medium;
 }
-
+aside{
+    width: 40%;
+    height: 60%;
+}
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
@@ -20,10 +23,10 @@ a:hover {
     text-decoration: none;
 }
 
-input:focus {
-    background-color: beige;
-    width: 50%
-}
+/*input:focus {*/
+/*    background-color: beige;*/
+/*    width: 50%*/
+/*}*/
 
 input[type=radio]:focus {
     background-color: hotpink;
@@ -50,11 +53,13 @@ button {
     height: 30%;
     background-color: indigo;
     color: darkgray;
+    border: solid red 1.5px;
 }
 
 button:focus {
     background-color: rgb(225, 225, 225);
     color: #0f0fff;
+    border: solid black 1.5px;
 }
 textarea{
     width: 20em;
