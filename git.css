@@ -34,7 +34,7 @@ input[type=radio]:focus {
 }
 
 h1, h2 {
-    color: beige;
+    color: black;
     text-align: center;
 }
 
@@ -49,12 +49,12 @@ h2{
 h1::first-letter{
     font-size: 3.5em;
 }
-button {
-    height: 30%;
-    background-color: indigo;
-    color: darkgray;
-    border: solid red 1.5px;
-}
+/*button {*/
+/*    height: 30%;*/
+/*    background-color: indigo;*/
+/*    color: darkgray;*/
+/*    border: solid red 1.5px;*/
+/*}*/
 
 button:focus {
     background-color: rgb(225, 225, 225);
@@ -65,7 +65,7 @@ textarea{
     width: 20em;
     height: 8em;
     color: #0f0fff;
-    border: solid beige 0.2em;
+    border: solid skyblue 5px;
 }
 textarea[placeholder]{
     font-family: Georgia, sans-serif;
@@ -86,8 +86,15 @@ div table {
     background-color: darkolivegreen;
     color: cornsilk;
 }
+form {
+    text-align: center;
+
+}
 form button {
     text-align: end;
+    border-color: skyblue;
+    border-style: dashed solid;
+    border-width: 5px;
 }
 ol, li {
     background-color: plum;
