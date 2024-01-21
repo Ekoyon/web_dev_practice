@@ -59,7 +59,8 @@ h1::first-letter{
 button:focus {
     background-color: rgb(225, 225, 225);
     color: #0f0fff;
-    border: solid black 1.5px;
+    border: 1.5px solid black;
+    border-radius: 0.5px;
 }
 textarea{
     width: 20em;
@@ -88,21 +89,24 @@ div table {
 }
 form {
     text-align: center;
-
 }
+
 form button {
     text-align: end;
     border-color: skyblue;
     border-style: dashed solid;
     border-width: 5px;
 }
+
 ol, li {
     background-color: plum;
     color: papayawhip;
 }
+
 h1 + p{
     color: papayawhip;
 }
+
 p > a{
     color: plum;
     font-weight: bold;
