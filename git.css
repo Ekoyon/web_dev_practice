@@ -3,6 +3,7 @@ body{
     color: darkblue;
     /*text-align: center;*/
     font-family: fantasy;
+    padding: 0 20%;
 }
 body::selection{
     background-color: darkolivegreen;
@@ -36,6 +37,7 @@ input[type=radio]:focus {
 h1, h2 {
     color: black;
     text-align: center;
+    margin: 0 auto;
 }
 
 h1 {
@@ -47,14 +49,21 @@ h2{
     font-size: 1.5em;
 }
 h1::first-letter{
-    font-size: 3.5em;
+    font-size: 3.1em;
 }
-/*button {*/
-/*    height: 30%;*/
-/*    background-color: indigo;*/
-/*    color: darkgray;*/
-/*    border: solid red 1.5px;*/
-/*}*/
+.age{
+    margin-top: 1em;
+}
+.race{
+    margin-bottom: 1em;
+}
+button {
+    height: 30%;
+    background-color: indigo;
+    color: darkgray;
+    border: solid red 1.5px;
+    padding: 0 3px;
+}
 
 button:focus {
     background-color: rgb(225, 225, 225);
@@ -67,6 +76,7 @@ textarea{
     height: 8em;
     color: #0f0fff;
     border: solid skyblue 5px;
+    padding: 1px 2px;
 }
 textarea[placeholder]{
     font-family: Georgia, sans-serif;
@@ -86,16 +96,16 @@ textarea[placeholder]{
 div table {
     background-color: darkolivegreen;
     color: cornsilk;
+    padding-left: 1em;
 }
 form {
-    text-align: center;
+    padding-left: 7em;
+    text-align: start;
 }
 
 form button {
-    text-align: end;
-    border-color: skyblue;
-    border-style: dashed solid;
-    border-width: 5px;
+    margin: 2em 30%;
+    padding: 3px 6px;
 }
 
 ol, li {
