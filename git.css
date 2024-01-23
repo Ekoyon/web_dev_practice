@@ -13,6 +13,12 @@ aside{
     width: 40%;
     height: 60%;
 }
+.name span {
+    margin-left: 3em;
+}
+.email span{
+    margin-left: 1.5em;
+}
 a {
     /*font-family: "Bauhaus 93";*/
     color: darkolivegreen;
@@ -104,7 +110,7 @@ form {
 }
 
 form button {
-    margin: 2em 30%;
+    margin: 2em 40%;
     padding: 3px 6px;
 }
 
