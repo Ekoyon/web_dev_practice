@@ -67,15 +67,18 @@ button {
     height: 30%;
     background-color: indigo;
     color: darkgray;
-    border: solid red 1.5px;
+    border: solid red .2em;
+    border-radius: 50%;
     padding: 0 3px;
 }
 
 button:focus {
     background-color: rgb(225, 225, 225);
     color: #0f0fff;
-    border: 1.5px solid black;
-    border-radius: 0.5px;
+    border: .1rem solid black;
+    margin-top: 35px;
+    border-radius: 50%;
+
 }
 textarea{
     width: 20em;
