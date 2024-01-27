@@ -80,7 +80,7 @@ button:focus {
     border: .1rem solid black;
     margin-top: 35px;
     border-radius: 50%;
-
+    transition: 1s;
 }
 textarea{
     width: 20em;
