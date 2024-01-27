@@ -5,3 +5,7 @@ body {
 section {
     opacity: 0.5;
 }
+div {
+    width: 37%;
+    display: inline-block;
+}

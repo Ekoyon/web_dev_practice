@@ -39,7 +39,9 @@ input[type=radio]:focus {
     background-color: hotpink;
     width: 40%;
 }
-
+#parent {
+    position: fixed;
+}
 h1, h2 {
     color: black;
     text-align: center;
