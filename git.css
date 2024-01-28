@@ -8,6 +8,7 @@ body{
 body::selection{
     background-color: darkolivegreen;
     font-size: medium;
+    transform: scale(1.5);
 }
 aside{
     width: 40%;
@@ -74,13 +75,13 @@ button {
     padding: 0 3px;
 }
 
-button:focus {
+button:hover {
     background-color: rgb(225, 225, 225);
     color: #0f0fff;
     border: .1rem solid black;
     margin-top: 35px;
     border-radius: 50%;
-    transition: 1s;
+    transition: 1.5s;
 }
 textarea{
     width: 20em;
