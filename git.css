@@ -17,11 +17,11 @@ aside{
 .name span {
     margin-left: 3em;
 }
-.email span{
-    margin-left: 1.5em;
-}
+/*.email span{*/
+/*    margin-left: 1.5em;*/
+/*}*/
 a {
-    /*font-family: "Bauhaus 93";*/
+    font-family: "cursive";
     color: darkolivegreen;
     text-decoration: none;
 }
@@ -89,6 +89,7 @@ textarea{
     color: #0f0fff;
     border: solid skyblue 5px;
     padding: 1px 2px;
+    margin: 2px;
 }
 textarea[placeholder]{
     font-family: Georgia, sans-serif;
