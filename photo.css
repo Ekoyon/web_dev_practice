@@ -1,4 +1,8 @@
 img {
-    width: 30%;
-    height: 50%;
+    width: 15em;
+    height: 17em;
+    margin: 33px;
+}
+nav {
+    padding: 1.5em;
 }
