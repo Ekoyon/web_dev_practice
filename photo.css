@@ -4,5 +4,8 @@ img {
     margin: 33px;
 }
 nav {
-    padding: 1.5em;
+    padding: 1.5em 0;
+    border-bottom: 2px solid #f1f1f1;
+    width:73em;
+    margin: 33px;
 }
