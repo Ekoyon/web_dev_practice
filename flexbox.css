@@ -10,9 +10,13 @@ h1 {
     height: 500px;
     margin: 0 auto;
     border: 5px solid #003049;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 #container div {
     width: 200px;
     height: 200px;
+    text-align: center;
 }
