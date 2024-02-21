@@ -1,4 +1,6 @@
 import Todo from './components/Todo'
+import Modal from "./components/Modal";
+import Backdrop from "./components/Backdrop";
 
 function App() {
     return (<div>
@@ -7,6 +9,8 @@ function App() {
             {/*        if i wanted multiple todos, I just need to replicate, like so:*/}
             <Todo text ='Finish this sprint' />
             <Todo text='Write more' />
+            <Modal />
+            <Backdrop />
         </div>
     );
 }
