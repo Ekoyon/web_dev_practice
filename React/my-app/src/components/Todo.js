@@ -20,7 +20,7 @@ function closeModal(){
                     Delete
                 </button>
             </div>
-            { modalIsOpen && <Modal />}
+            { modalIsOpen && <Modal onCancel={closeModal} onConfirm{closeModal}/>}
             { modalIsOpen && <Backdrop onClick={closeModal}/>}
         {/*    /!*or*!/*/}
         {/*    /!*{ modelIsOpen ? <Modal /> : null}*!/*/}
