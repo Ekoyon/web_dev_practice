@@ -66,7 +66,7 @@
         </div>
         <div class="col-md-6 text-center order-1 order-md-2">
             <div class="row justify-content-center">
-                <div class="col-10 col-lg-8 slur">
+                <div class="col-10 col-lg-8 slur mb-5 mb-md-0">
                     <h2>MUSEUM OF CANDY</h2>
                     <img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="lollipop icon">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum deleniti facilis,
@@ -77,12 +77,28 @@
         </div>
     </div>
     <div class="row align-items-center candy_content">
-        <div class="col-md-6 order-2 order-md-2">
-            <img src="img/milk.png" class="img-fluid" alt="milk jars">
-        </div>
-        <div class="col-md-6 text-center order-1 order-md-1">
+        <div class="col-md-6 text-center">
             <div class="row justify-content-center">
-                <div class="col-10 col-lg-8 slur">
+                <div class="col-10 col-lg-8 slur mb-5 mb-md-0">
+                    <h2>MUSEUM OF CANDY</h2>
+                    <img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="lollipop icon">
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum deleniti facilis,
+                        modi numquam omnis pariatur possimus qui repudiandae rerum. A consequatur cupiditate dolores
+                        labore, magnam odio quia quibusdam suscipit!</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="img/gumball.png" class="img-fluid" alt="milk jars">
+        </div>
+    </div>
+    <div class="row align-items-center candy_content">
+        <div class="col-md-6 order-2 order-md-1">
+            <img src="img/sprinkles.png" class="img-fluid" alt="candy with sprinkles">
+        </div>
+        <div class="col-md-6 text-center order-1 order-md-2">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 slur mb-5 mb-md-0">
                     <h2>MUSEUM OF CANDY</h2>
                     <img src="img/lolli_icon.png" class="d-none d-lg-inline" alt="lollipop icon">
                     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum deleniti facilis,
@@ -114,6 +130,16 @@
             $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
         });
     });
+</script>
+
+<!--javascript and jquery-->
+<script>
+    $(function () {
+        $(document).scroll(function (){
+            var $nav = $("#mainNav");
+            $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        })
+    })
 </script>
 </body>
 </html>
