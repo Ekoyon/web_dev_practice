@@ -22,4 +22,17 @@
 // the second (++i) increases, stores and returns the incremented value
 // I'll be using ++i sha
 
+// in JS, you can have a variable that changes type, some programming languages don't accept that ie if you saved a value as boolean, it must always be boolean eg typescript.
+
+// we use const to create a constant variable. A variable that cannot the changed.
+// we use var also, it's an old way of making variables and still works.
 //
+// Define a constant called boilingPointC and set it to 100.
+// const boilingPointC = 100;
+// Define a second constant called boilingPointF and set it to 212.
+// const boilingPointC = 212;
+
+// Boolean: true or false, using in logic and decisions
+
+// RULES FOR SETING IDENTIFIERS IN JS:
+// -
