@@ -33,3 +33,6 @@
 // const boilingPointC = 212;
 
 // Boolean: true or false, using in logic and decisions
+
+// RULES FOR SETING IDENTIFIERS IN JS:
+// -
