@@ -22,7 +22,7 @@
 // the second (++i) increases, stores and returns the incremented value
 // I'll be using ++i sha
 
-// in JS, you can have a variable that changes type, some programming languages don't accept that ie if you saved a value as boolean, it must always be boolean.
+// in JS, you can have a variable that changes type, some programming languages don't accept that ie if you saved a value as boolean, it must always be boolean eg typescript.
 
 // we use const to create a constant variable. A variable that cannot the changed.
 // we use var also, it's an old way of making variables and still works.
