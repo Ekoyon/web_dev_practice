@@ -42,3 +42,4 @@
 // Developers conventionally use camelcase method of stating identifiers, ie start with a small letter, begin a different word with a cap eg newWord.
 // It is also very important to have good naming techniques so years later, you can understand what you did, or someone else can use your code.
 
+// STRINGSSSS
