@@ -42,3 +42,7 @@
 // Developers conventionally use camelcase method of stating identifiers, ie start with a small letter, begin a different word with a cap eg newWord.
 // It is also very important to have good naming techniques so years later, you can understand what you did, or someone else can use your code.
 
+// STRINGS!
+// they're textual representation. They basically contain text wrapped in quotes to put them together.
+// single or double quotes work, being consistent matters so use single quotes.
+// you can't use them together though, like so: 'hello world", you'd get an error
