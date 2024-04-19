@@ -56,4 +56,10 @@
 // These are built in actions we can perform with individual strings
 // they look like: string.method();
 // eg: let msg = "you just disgust me";
-// then: msg.toUpperCase()
+// then: msg.toUpperCase(). This leaves the original message unchanged and makes a copy that it prints out which is uppercased.
+// another is .trim()
+// eg let userInput = "    hello my name is Lara Jameson"
+// then: userInput.trim() eats up the space at the beginning or end of a string and not in the middle. ALso, it won't trim non-space characters
+
+// chaining methods together
+// you can do: userInput.trim().toUppercase(); and you'd get the result.
