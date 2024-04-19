@@ -71,4 +71,7 @@
 // let whisper = message.toLowerCase().trim();
 
 // Methods with attributes
-// eg .indexof()
+// eg .indexOf()
+// if we wanted to check the index of a character, we use this and it gives the index of the first character that appears. if i had 'hahaha' as a string and wanted to search indexOf('h'), I'd get 0
+// .slice()
+// it cuts off a portion of the string, you parse in the indices of the point it should cut fom, and where to stop. The last bit is optional though, you can parse in only the beginning index.
