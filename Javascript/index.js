@@ -46,3 +46,5 @@
 // they're textual representation. They basically contain text wrapped in quotes to put them together.
 // single or double quotes work, being consistent matters so use single quotes.
 // you can't use them together though, like so: 'hello world", you'd get an error
+// Every character in a string is indexed, ie associated with a number. The first number starting with 0.
+// Why's it important? So we can access a particular number and work with it.
