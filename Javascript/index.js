@@ -48,3 +48,12 @@
 // you can't use them together though, like so: 'hello world", you'd get an error
 // Every character in a string is indexed, ie associated with a number. The first number starting with 0.
 // Why's it important? So we can access a particular number and work with it.
+// Every string has a property '.length' to check how many characters are contained.
+// You can add two strings together, this is called cancatination. You get a new string containing both values of strings. Eg 'lol' + 'lol' = 'lollol'
+// You can't update one character at a time in a string variable, you can only overwrite that string.
+// If you wanted to add a space, you can do "lol" + " " + "lol"
+// String Methods.
+// These are built in actions we can perform with individual strings
+// they look like: string.method();
+// eg: let msg = "you just disgust me";
+// then: msg.toUpperCase()
