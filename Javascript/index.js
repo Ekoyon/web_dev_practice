@@ -97,21 +97,67 @@
 <html lang="en">
     <head>
     <meta charset="UTF-8">
-    <title>Toggle Visibility Example</title>
+    <title>Simple To-Do List</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+}
+    #items {
+    margin-top: 20px;
+}
+    .item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    .delete-btn {
+    cursor: pointer;
+    color: red;
+}
+</style>
 </head>
 <body>
-<button onclick="toggleVisibility()">Toggle Visibility</button>
-<p id="myParagraph">Hello, watch me disappear and reappear!</p>
+<h1>Simple To-Do List</h1>
+<input type="text" id="itemInput" placeholder="Add new item...">
+    <button onclick="addItem()">Add Item</button>
+    <div id="items"></div>
 
-<script>
-    function toggleVisibility() {
-    var p = document.getElementById("myParagraph");
-    if (p.style.display === "none") {
-    p.style.display = "block";
-} else {
-    p.style.display = "none";
-}
-}
-</script>
+    <script>
+        function addItem() {
+        var input = document.getElementById('itemInput');
+        var itemText = input.value;
+        if (itemText.trim() !== "") { // Check if input is not just empty spaces
+        var div = document.createElement('div');
+        div.className = 'item';
+
+        var p = document.createElement('p');
+        p.textContent = itemText;
+
+        var deleteBtn = document.createElement('span');
+        deleteBtn.textContent = 'Delete';
+        deleteBtn.className = 'delete-btn';
+        deleteBtn.onclick = function() {
+        this.parentNode.remove();
+    };
+
+        div.appendChild(p);
+        div.appendChild(deleteBtn);
+        document.getElementById('items').appendChild(div);
+
+        input.value = ""; // Clear input after adding
+        input.focus(); // Put cursor back to input
+    }
+    }
+
+        document.getElementById('itemInput').addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+        addItem();
+    }
+    });
+    </script>
 </body>
 </html>
