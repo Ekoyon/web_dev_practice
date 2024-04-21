@@ -75,3 +75,43 @@
 // if we wanted to check the index of a character, we use this and it gives the index of the first character that appears. if i had 'hahaha' as a string and wanted to search indexOf('h'), I'd get 0
 // .slice()
 // it cuts off a portion of the string, you parse in the indices of the point it should cut fom, and where to stop. The last bit is optional though, you can parse in only the beginning index.
+// eg let humor = "hahahaha that is sooo funny"
+// humor.slice(9);
+// result is "that is sooo funny"
+// to add endIndex, the parenthesis contains two arguments (0, 5)
+// using negative numbers, starts from the end of the string eg -1 would give the last character in the string
+// .replace()
+// as the name implies, replaces something with something
+// as in the earlier example, I could do humor.replace('hahahaha', 'lmao'), and it'll replace the former with the later. It'll only do it for the first instance of the set of characters or character.
+// eg repeat(), for argument it takes the number of times you'd like to repeat the string
+
+// eg:Use a string method to extract the "board" part of "skateboard"  (using the slice method)
+//
+// Replace the "o" in board with an "e" (using the replace method)
+//
+// Save the result in a variable called facialHair
+
+// solution: let facialHair = word.slice(5).replace('o', 'e');
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Toggle Visibility Example</title>
+</head>
+<body>
+<button onclick="toggleVisibility()">Toggle Visibility</button>
+<p id="myParagraph">Hello, watch me disappear and reappear!</p>
+
+<script>
+    function toggleVisibility() {
+    var p = document.getElementById("myParagraph");
+    if (p.style.display === "none") {
+    p.style.display = "block";
+} else {
+    p.style.display = "none";
+}
+}
+</script>
+</body>
+</html>
