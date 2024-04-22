@@ -93,71 +93,36 @@
 
 // solution: let facialHair = word.slice(5).replace('o', 'e');
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    <meta charset="UTF-8">
-    <title>Simple To-Do List</title>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-}
-    #items {
-    margin-top: 20px;
-}
-    .item {
-    background-color: #f4f4f4;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-    .delete-btn {
-    cursor: pointer;
-    color: red;
-}
-</style>
-</head>
-<body>
-<h1>Simple To-Do List</h1>
-<input type="text" id="itemInput" placeholder="Add new item...">
-    <button onclick="addItem()">Add Item</button>
-    <div id="items"></div>
+// Template literals
+// in cases where cancatination should happen, it makes it seemless
+// Relatively new (compared to js), they'resuper useful, allowing us create strings and inbed expressions in said strings, and that expression will be turned into a string.
+// for it to work, use back-tick key (`...`)
+// example: `hello ${2+6} equals a number`, it's not treated as a string but js evaluates the expression and prints result as a string.
+// Instead cancatination, you just imbed variables directly into the expression to create the desired string.
 
-    <script>
-        function addItem() {
-        var input = document.getElementById('itemInput');
-        var itemText = input.value;
-        if (itemText.trim() !== "") { // Check if input is not just empty spaces
-        var div = document.createElement('div');
-        div.className = 'item';
+//Now unto Null and Undefined type
+// null represents intentional lack of value, that is creating eg a variable and setting it to nothing.
+// undefined may be looked at as JSs way of saying 'I don't know'
 
-        var p = document.createElement('p');
-        p.textContent = itemText;
+//math object.
+//contains properties and Methods for mathematical constants and functions.
+// properties like mathematical constants: Math.PI Math.E
+// methods like Math.round(), to round off numbers, Math.sin() to get the sin of a number, Math.floor() takes decimal and chop off the decimal, doesn't round it off o, just chop
+// Math.ceil() rounds off decimal no matter what, qualified for rounding off or not. Math.random() generates random numbers between 0 and 1 but not including 1; but we can floor those randoms to get an integer that's random. eg Math.floor(Math.random() * 5)
+// so you get randoms between 0 and 5, not including 5. To get from like 1, we add 1: Math.floor(Math.random() * 5) + 1
+// we can also do Math.pwr(2,3) instead of 2 ** 3
 
-        var deleteBtn = document.createElement('span');
-        deleteBtn.textContent = 'Delete';
-        deleteBtn.className = 'delete-btn';
-        deleteBtn.onclick = function() {
-        this.parentNode.remove();
-    };
-
-        div.appendChild(p);
-        div.appendChild(deleteBtn);
-        document.getElementById('items').appendChild(div);
-
-        input.value = ""; // Clear input after adding
-        input.focus(); // Put cursor back to input
-    }
-    }
-
-        document.getElementById('itemInput').addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-        addItem();
-    }
-    });
-    </script>
-</body>
-</html>
+//Exercises
+// Please create a new variable called roll, which will be a string that displays each die as well as their sum.  Follow this pattern:
+//
+// die1: 3
+//
+// die2: 5
+//
+// roll: "You rolled a 3 and a 5. They sum to 8"
+//// NO TOUCHING! (please)
+// const die1 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
+// const die2 = Math.floor(Math.random() * 6) + 1; //random number from 1-6
+//
+// // YOUR CODE BELOW THIS LINE:
+// let roll = `You rolled a ${die1} and ${die2}. They sum to ${die1 + die2}`
