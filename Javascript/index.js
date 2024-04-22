@@ -98,3 +98,7 @@
 // Relatively new (compared to js), they'resuper useful, allowing us create strings and inbed expressions in said strings, and that expression will be turned into a string.
 // for it to work, use back-tick key (`...`)
 // example: `hello ${2+6} equals a number`, it's not treated as a string but js evaluates the expression and prints result as a string.
+// Instead cancatination, you just imbed variables directly into the expression to create the desired string.
+
+//Now unto Null and Undefined type
+//
