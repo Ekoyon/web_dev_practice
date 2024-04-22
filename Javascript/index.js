@@ -101,4 +101,5 @@
 // Instead cancatination, you just imbed variables directly into the expression to create the desired string.
 
 //Now unto Null and Undefined type
-//
+// null represents intentional lack of value, that is creating eg a variable and setting it to nothing.
+// undefined may be looked at as JSs way of saying 'I don't know'
