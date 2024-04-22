@@ -103,3 +103,13 @@
 //Now unto Null and Undefined type
 // null represents intentional lack of value, that is creating eg a variable and setting it to nothing.
 // undefined may be looked at as JSs way of saying 'I don't know'
+
+//math object.
+//contains properties and Methods for mathematical constants and functions.
+// properties like mathematical constants: Math.PI Math.E
+// methods like Math.round(), to round off numbers, Math.sin() to get the sin of a number, Math.floor() takes decimal and chop off the decimal, doesn't round it off o, just chop
+// Math.ceil() rounds off decimal no matter what, qualified for rounding off or not. Math.random() generates random numbers between 0 and 1 but not including 1; but we can floor those randoms to get an integer that's random. eg Math.floor(Math.random() * 5)
+// so you get randoms between 0 and 5, not including 5. To get from like 1, we add 1: Math.floor(Math.random() * 5) + 1
+// we can also do Math.pwr(2,3) instead of 2 ** 3
+
+//
