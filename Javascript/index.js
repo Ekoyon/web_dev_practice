@@ -143,5 +143,11 @@
 
 // to know:
 // console.log prints on the console
+// alert
+// prompt does a pop-up
 // working in a file!!!
 // console.log is used in a file that is disconnected from the console to print on the console.
+
+// to add number to a integer in a variable: parseInt(variable) + 1
+
+// running code in a file: index.js
