@@ -1,1 +1,3 @@
-console.log("HELLO FROM THE FIRST JS FILE")
+console.log("HELLO FROM THE FIRST JS FILE");
+let total = 1 + 3;
+console.log("GOODBYE!")

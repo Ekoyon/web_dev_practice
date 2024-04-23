@@ -151,3 +151,5 @@
 // to add number to a integer in a variable: parseInt(variable) + 1
 
 // running code in a file: notes.js
+
+// We put the script element in js at the end of the html file so that the interaction is first with the stylesheet before with js
