@@ -126,3 +126,22 @@
 //
 // // YOUR CODE BELOW THIS LINE:
 // let roll = `You rolled a ${die1} and ${die2}. They sum to ${die1 + die2}`
+
+// Decision making in JS
+// This basically means having different outcomes based off of various criterion.
+
+//comparison operators.
+// these aren't necessarily mathematical, they just compare a left side to a right side. They returns boolean value. They are:
+// > greater than
+// < less than
+// <= less than or equal to
+// >= greater than or equal to
+// == equal to
+// != not equal to
+// === strictly equal to
+// !== strictly not equal
+
+// to know:
+// console.log
+// working in a file!!!
+//
