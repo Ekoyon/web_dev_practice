@@ -142,6 +142,6 @@
 // !== strictly not equal
 
 // to know:
-// console.log
+// console.log prints on the console
 // working in a file!!!
-//
+// console.log is used in a file that is disconnected from the console to print on the console.
