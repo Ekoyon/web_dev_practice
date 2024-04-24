@@ -153,3 +153,10 @@
 // running code in a file: notes.js
 
 // We put the script element in js at the end of the html file so that the interaction is first with the stylesheet before with js
+
+//CONDITIONALS
+// having touched on comparison, if we wanted to get an outcome based on a criterion eg 5+6 = 56 returns true so ....
+// let's talk about if statements:
+// if (something set to something) {
+// do this
+// }
