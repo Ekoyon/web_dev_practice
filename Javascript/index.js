@@ -23,4 +23,15 @@ if (1 + 2 === 3) {
 } else {
     console.log("you got it wrong")
 }
-//
+
+//exercise
+// If num is an even number, print out "even".  Don't do anything if num is an odd number.
+
+function isEven(num){
+    //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
+    if(num % 2 == 0){
+        console.log("even");
+    }
+
+    //AND THIS LINE ↑↑↑↑↑
+}
