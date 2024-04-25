@@ -29,9 +29,20 @@ if (1 + 2 === 3) {
 
 function isEven(num){
     //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
-    if(num % 2 == 0){
+    if(num % 2 === 0){
         console.log("even");
     }
 
     //AND THIS LINE ↑↑↑↑↑
 }
+
+// else if
+const dayOfWeek = 'Monday';
+
+if (dayOfWeek === 'Monday') {
+    console.log("Mondays <<<<<")
+} else if (dayOfWeek === 'Saturday') {
+    console.log("Hehe, yay Saturday!!!!")
+}
+
+// you can have as much else if's as you want
