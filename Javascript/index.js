@@ -29,9 +29,32 @@ if (1 + 2 === 3) {
 
 function isEven(num){
     //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
-    if(num % 2 == 0){
+    if(num % 2 === 0){
         console.log("even");
     }
 
     //AND THIS LINE ↑↑↑↑↑
+}
+
+// else if
+const dayOfWeek = 'Monday';
+
+if (dayOfWeek === 'Monday') {
+    console.log("Mondays <<<<<")
+} else if (dayOfWeek === 'Saturday') {
+    console.log("Hehe, yay Saturday!!!!")
+}
+
+// you can have as much else if's as you want
+
+const age = 66;
+
+if (age < 5){
+    console.log("A baby, get in for free!")
+} else if (age < 10) {
+    console.log("You're a child, you pay $10")
+} else if (age <= 65) {
+    console.log("You're a full grown adult, you pay $20")
+} else {
+    console.log(" You pay $20 Senior")
 }
