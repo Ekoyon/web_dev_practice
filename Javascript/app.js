@@ -12,3 +12,14 @@ if (password.indexOf(' ') === -1) {
 } else {
     console.log('do not add space')
 }
+
+//actual nesting
+if (password.length >= 6) {
+    if (password.indexOf(' ') === -1) {
+        console.log('nice and good')
+    } else {
+        console.log('do not add space')
+    }
+} else{
+    console.log("Not enough");
+}
