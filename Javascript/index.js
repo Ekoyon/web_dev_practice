@@ -71,13 +71,13 @@ if (age < 5){
 function getColor(phrase){
     //WRITE YOUR CODE BETWEEN THIS LINE: ↓ ↓ ↓ ↓
     if (phrase === 'stop') {
-        console.log('red')
+        console.log('red');
     } else if(phrase === 'slow') {
-        console.log('yellow')
+        console.log('yellow');
     } else if(phrase === 'go') {
-        console.log('green')
+        console.log('green');
     } else {
-        console.log('purple')
+        console.log('purple');
     }
 
     //AND THIS LINE ↑↑↑↑↑
