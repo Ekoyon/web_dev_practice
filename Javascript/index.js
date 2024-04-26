@@ -47,17 +47,17 @@ if (dayOfWeek === 'Monday') {
 
 // you can have as much else if's as you want
 
-const age = 66;
+const age = 64;
 
-if (age < 5){
-    console.log("A baby, get in for free!")
-} else if (age < 10) {
-    console.log("You're a child, you pay $10")
-} else if (age <= 65) {
-    console.log("You're a full grown adult, you pay $20")
-} else {
-    console.log(" You pay $20 Senior")
-}
+// if (age < 5){
+//     console.log("A baby, get in for free!")
+// } else if (age < 10) {
+//     console.log("You're a child, you pay $10")
+// } else if (age <= 65) {
+//     console.log("You're a full grown adult, you pay $20")
+// } else {
+//     console.log(" You pay $20 Senior")
+// }
 
 // exercise
 // Your job is to print out a color based upon the following rules:
@@ -81,4 +81,13 @@ function getColor(phrase){
     }
 
     //AND THIS LINE ↑↑↑↑↑
+}
+
+// using logical OR to handle the age thingy.
+if (age < 5 || age >= 65) {
+    console.log('you get free pass');
+} else if (age < 10) {
+    console.log('please pay $10');
+} else if (age < 65) {
+    console.log('please pay $20')
 }
