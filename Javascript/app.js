@@ -1,4 +1,4 @@
-// const password = prompt("please enter your password.");
+const password = prompt("please enter your password.");
 // //conventional
 //
 // // length must be >= 6
@@ -58,3 +58,52 @@ if (mystery[0] === 'P' && mystery.length > 5 && mystery.indexOf('7') !== -1) {
 }
 
 // Logical OR
+// represented with || in code.
+//in index.js
+
+// AND will run before OR.
+
+// logical NOT
+// represented by '!', it negates an expression. It flips truth to false and vise vera
+
+let firstName = prompt('enter your first name');
+if (!firstName) {
+    firstName = prompt('enter your first name');
+}
+
+// you can also negate an entire expression with it
+// for the age example in index.js, if i only wanted to target people not getting in for free:
+const age = 45;
+
+if (!((age >= 0 && age < 5) || age >= 65)) {
+    console.log('you are not a baby or senior');
+}
+
+// SWITCH statement
+// how it works: first keyword - switch; second keyword: case; third keyword: break.
+
+const day = 2;
+switch (day) {
+    case 1 :
+        console.log("MONDAY");
+        break;
+    case 2:
+        console.log("TUESDAY");
+        break;
+    case 3:
+        console.log("WEDNESDAY");
+        break;
+    case 4:
+        console.log("THURSDAY");
+        break;
+    case 5:
+        console.log("FRIDAY");
+        break;
+    // if we wanted to match two cases:
+    case 6:
+    case 7:
+        console.log("WEEKEND");
+        break;
+    default:
+        console.log("I DON'T KNOW THAT")
+}
