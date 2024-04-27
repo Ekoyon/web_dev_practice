@@ -84,10 +84,12 @@ function getColor(phrase){
 }
 
 // using logical OR to handle the age thingy.
-if (age < 5 || age >= 65) {
+if (age >= 0 && age < 5|| age >= 65) {
     console.log('you get free pass');
-} else if (age < 10) {
+} else if (age >= 5 && age < 10) {
     console.log('please pay $10');
-} else if (age < 65) {
+} else if (age >= 10 && age < 65) {
     console.log('please pay $20')
+} else {
+    console.log('invalid age.')
 }

@@ -107,3 +107,15 @@ switch (day) {
     default:
         console.log("I DON'T KNOW THAT")
 }
+
+// Arrays!!
+// They're data structures that allow us store multiple values under one variable.
+// A data structure is basically a collection of data
+// Arrays allow us group data together. Eg a pill box for every day of the week. Every day having its on slot.
+// Arrays are ordered collection of data. eg in the comment section of a post, some comments have to be at the top depending on some order.
+// .length property tells you how many data is collated in the array.
+// we can also put any data type in any array eg you could have strings, numbers, boolean in one array.
+// Exercise
+// Please define a variable called lottoNumbers and set it equal to an array containing any 6 numbers.  It's simple, but we've got to start somewhere!
+// Define lottoNumbers below:
+let lottoNumbers = [5, 55, 54, 4, 6, 65]
