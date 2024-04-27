@@ -115,7 +115,13 @@ switch (day) {
 // Arrays are ordered collection of data. eg in the comment section of a post, some comments have to be at the top depending on some order.
 // .length property tells you how many data is collated in the array.
 // we can also put any data type in any array eg you could have strings, numbers, boolean in one array.
+
 // Exercise
 // Please define a variable called lottoNumbers and set it equal to an array containing any 6 numbers.  It's simple, but we've got to start somewhere!
 // Define lottoNumbers below:
 let lottoNumbers = [5, 55, 54, 4, 6, 65]
+
+// in strings each character has an index while with arrays, it's each element.
+// changing elements in an array
+// eg given: let Fullname = [Avase, Peace]
+// having messed up the first element, I can say Fullname[0] = 'Avose'
