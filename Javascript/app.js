@@ -123,5 +123,9 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 
 // in strings each character has an index while with arrays, it's each element.
 // changing elements in an array
-// eg given: let Fullname = [Avase, Peace]
-// having messed up the first element, I can say Fullname[0] = 'Avose'
+// eg given: let fullName = [Avase, Peace]
+// having messed up the first element, I can say fullName[0] = 'Avose'
+
+// Adding an extra element to an array
+// eg: let beattles = ['paul', 'lazarus', 'kim']
+// adding from the console: beattles[3] = 'hosea'
