@@ -142,3 +142,6 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 // // YOUR CODE BELOW HERE:
 // leaderboard[1]='Luna';
 // leaderboard [3] = 'Draco';
+
+// array methods
+//
