@@ -123,5 +123,27 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 
 // in strings each character has an index while with arrays, it's each element.
 // changing elements in an array
-// eg given: let Fullname = [Avase, Peace]
-// having messed up the first element, I can say Fullname[0] = 'Avose'
+// eg given: let fullName = [Avase, Peace]
+// having messed up the first element, I can say fullName[0] = 'Avose'
+
+// Adding an extra element to an array
+// eg: let beattles = ['paul', 'lazarus', 'kim']
+// adding from the console: beattles[3] = 'hosea'
+
+// exercise:
+// Without touching line 1, please make the following changes:
+//
+// Unfortunately, I misspelled the 2nd name in the leaderboard array.  I meant to write "Luna" instead of "Lua".  Please update it to "Luna" (without changing line 1)
+//
+// Bellatrix has fallen off the leaderboard and has been replaced by Draco! Please update the last element of the array so that it holds "Draco" instead of "Bellatrix" (once again, please do this without changing line 1)
+// solution:
+// const leaderboard = ['Harry', 'Lua', 'Hermione', 'Bellatrix']; //DON'T TOUCH THIS LINE!
+//
+// // YOUR CODE BELOW HERE:
+// leaderboard[1]='Luna';
+// leaderboard [3] = 'Draco';
+
+// array methods
+// Push & Pop
+// Push: add to end
+// pop: remove from end
