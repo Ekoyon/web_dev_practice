@@ -144,4 +144,6 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 // leaderboard [3] = 'Draco';
 
 // array methods
-//
+// Push & Pop
+// Push: add to end
+// pop: remove from end
