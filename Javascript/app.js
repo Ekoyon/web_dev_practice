@@ -146,4 +146,8 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 // array methods
 // Push & Pop
 // Push: add to end
+let movieLine = ['tom', 'nancy'];
+movieLine[2] = 'pablo';
+movieLine.push('oliver')
+// unlike with string methods, the array method updates the array.
 // pop: remove from end
