@@ -144,10 +144,19 @@ let lottoNumbers = [5, 55, 54, 4, 6, 65]
 // leaderboard [3] = 'Draco';
 
 // array methods
+// stacks
 // Push & Pop
 // Push: add to end
 let movieLine = ['tom', 'nancy'];
 movieLine[2] = 'pablo';
-movieLine.push('oliver')
+movieLine.push('oliver');
 // unlike with string methods, the array method updates the array.
 // pop: remove from end
+movieLine.pop()
+// it doesn't take any arguments
+// it just removes the last element.
+let person = movieLine.pop();
+
+// Queue
+// Shift and unshift
+//
