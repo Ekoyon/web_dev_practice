@@ -159,4 +159,10 @@ let person = movieLine.pop();
 
 // Queue
 // Shift and unshift
-//
+// Shift removes from the beginning of the line
+movieLine.shift();
+// it also doesn't take arguments
+let upwards = movieLine.shift();
+
+// unshift
+movieLine.push('olivia', 'samson', 'elena', 'gideon');
