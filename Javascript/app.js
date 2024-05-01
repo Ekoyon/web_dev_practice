@@ -168,3 +168,24 @@ let upwards = movieLine.shift();
 movieLine.push('olivia', 'samson', 'elena', 'gideon');
 movieLine.unshift('VIP');
 // it adds vip to the top of the array
+
+// exercise
+// Using the array methods we just learned...
+//
+// Remove the first element, "The Moon", from the planets array.  The moon is not a planet!
+//
+// Add in "Saturn" at the very end of the planets array
+//
+// Add "Mercury" as the first element in the planets array.
+//
+// At the end of your hard work, planets should look like this: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn"]
+//
+// (This one is super easy to cheat on.  Please use the array methods we just covered, rather than simply changing the values in planets directly)
+
+// solution
+const planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter']; //DO NOT TOUCH THIS LINE!
+
+// YOUR CODE GOES BELOW THIS LINE:
+planets.shift('The Moon');
+planets.push('Saturn');
+planets.unshift('Mercury');
