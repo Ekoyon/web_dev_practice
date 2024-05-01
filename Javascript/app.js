@@ -189,3 +189,8 @@ const planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter']; //DO NOT TOUCH
 planets.shift('The Moon');
 planets.push('Saturn');
 planets.unshift('Mercury');
+
+// concat
+// This is basically joining arrays together to form a new third merged array. How does it work?
+// You call one array and pass the second as the concat argument
+planets.concat(person);
