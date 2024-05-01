@@ -166,3 +166,5 @@ let upwards = movieLine.shift();
 
 // unshift
 movieLine.push('olivia', 'samson', 'elena', 'gideon');
+movieLine.unshift('VIP');
+// it adds vip to the top of the array
