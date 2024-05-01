@@ -194,3 +194,11 @@ planets.unshift('Mercury');
 // This is basically joining arrays together to form a new third merged array. How does it work?
 // You call one array and pass the second as the concat argument
 planets.concat(person);
+
+// includes
+// it returns boolean data type. It basically lets you know if the array has a value in it
+const monthOfBirth = [May, June, August];
+console.log(monthOfBirth.includes(August));
+// returns true
+
+// indexOf
