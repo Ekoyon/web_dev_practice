@@ -195,10 +195,17 @@ planets.unshift('Mercury');
 // You call one array and pass the second as the concat argument
 planets.concat(person);
 
-// includes
+// includes()
 // it returns boolean data type. It basically lets you know if the array has a value in it
 const monthOfBirth = [May, June, August];
 console.log(monthOfBirth.includes(August));
 // returns true
 
-// indexOf
+// indexOf()
+// works how indexof in strings works, gives an index to an element in an array
+monthOfBirth.indexOf(May);
+
+// reverse()
+// This basically reverses an array's order
+monthOfBirth.reduce();
+// it's the same array but with a different order.
