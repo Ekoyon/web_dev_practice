@@ -235,3 +235,12 @@ scores.sort();
 
 // === and == for arrays
 // arrays are not equal at all.
+
+// const and arrays
+// with const, you can edit the content of the array in js. All it cares for is that the array isn't reassigned.
+
+// nested arrays
+const colors = [
+    ['red', 'blue', 'green'],
+    ['purple', 'piink', 'indigo']
+]
