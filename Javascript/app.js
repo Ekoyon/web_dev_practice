@@ -232,3 +232,6 @@ months.splice(1,0, 'February');
 let scores = [123, 7, 40, 10]
 scores.sort();
 // it does this numerically according to the first number.
+
+// === and == for arrays
+// arrays are not equal at all.
