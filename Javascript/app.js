@@ -209,3 +209,26 @@ monthOfBirth.indexOf(May);
 // This basically reverses an array's order
 monthOfBirth.reduce();
 // it's the same array but with a different order.
+
+// slice()
+// it gets you the remaining array from the index you selected. eg
+planets.slice(1);
+// gets you the array from index of 1 down. which is ['Venus', 'Earth', 'Mars', 'Jupiter'];
+// you could add a stop index, but it doesn't add the index.
+planets.slice(2,4);
+// gives ['Earth', 'Mars']
+
+// splice
+// similar to slice but changes the contents of an array by removing or replacing existing elements and/or adding new elements in place (according to MDN)
+const months = ['Jan', 'March', 'April', 'June', 'July', 'August', 'September', 'Zazu','October', 'November', 'December'];
+// you need to specify where to start, how many things to delete, what to insert. It is destructive to the existing array.
+months.splice(7, 1);
+// to insert
+months.splice(1,0, 'February');
+// it's best to edit the end of an array.
+
+// sort()
+// the default working of this is converting elements to strings and comparing with their utf-16 values, so most likely alphabetical
+let scores = [123, 7, 40, 10]
+scores.sort();
+// it does this numerically according to the first number.
