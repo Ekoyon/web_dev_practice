@@ -226,3 +226,9 @@ months.splice(7, 1);
 // to insert
 months.splice(1,0, 'February');
 // it's best to edit the end of an array.
+
+// sort()
+// the default working of this is converting elements to strings and comparing with their utf-16 values, so most likely alphabetical
+let scores = [123, 7, 40, 10]
+scores.sort();
+// it does this numerically according to the first number.
