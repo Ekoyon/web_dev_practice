@@ -29,3 +29,7 @@ const product = {
     price: 1.99,
     flavors: ['grape', 'apple', 'cherry']
 }
+
+// accessing data out of objects. eg
+Ise["firstName"]
+// this is how we access values of keys.
