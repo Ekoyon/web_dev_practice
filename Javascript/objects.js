@@ -33,3 +33,5 @@ const product = {
 // accessing data out of objects. eg
 Ise["firstName"]
 // this is how we access values of keys.
+// second way:
+Ise.firstName
