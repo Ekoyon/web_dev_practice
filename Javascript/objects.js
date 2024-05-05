@@ -35,3 +35,9 @@ Ise["firstName"]
 // this is how we access values of keys.
 // second way:
 Ise.firstName
+
+// what happens when we make an object?
+const years = {1999: 'Meh',
+    2020: 'Iconic'
+}
+// every key is turned into a string and that's why we can do Ise["firstName"]; without the quotes, it won't work cause it expects a variable name when declared with quotes
