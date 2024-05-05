@@ -64,3 +64,10 @@ const restaurant = {
 //YOUR CODE GOES DOWN HERE:
 let fullAddress = restaurant.address + ", " + restaurant.city + ", " + restaurant.state + " " + restaurant.zipcode;
 restaurant[fullAddress];
+
+// Modifying objects
+const midterms = {danielle: 96, thomas: 56}
+// iff i wanted to change Thomas' grade
+midterms.thomas = 65;
+
+// shikina.
