@@ -71,3 +71,4 @@ const midterms = {danielle: 96, thomas: 56}
 midterms.thomas = 65;
 
 // shikina.
+
