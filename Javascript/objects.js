@@ -72,3 +72,4 @@ midterms.thomas = 65;
 
 // shikina.
 
+// nesting arrays and objects
