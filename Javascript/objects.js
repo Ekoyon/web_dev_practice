@@ -75,7 +75,7 @@ midterms.thomas = 65;
 // nesting arrays and objects
 // let's say we wanted to make a range of values and keys but with more properties.
 const comments = [
-    {username: 'Tammy', text: 'this is soo funny' likes: 6},
-    {username: 'Ken' text: 'you all do the wildest shit', likes: 9}
+    {username: 'Tammy', text: 'this is soo funny', likes: 6},
+    {username: 'Ken', text: 'you all do the wildest shit', likes: 9}
 ]
 // how would I access Ken's comment? by comments[1].text
