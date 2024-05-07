@@ -79,3 +79,4 @@ const comments = [
     {username: 'Ken', text: 'you all do the wildest shit', likes: 9}
 ]
 // how would I access Ken's comment? by comments[1].text
+// LOOPS
