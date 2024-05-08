@@ -80,3 +80,11 @@ const comments = [
 ]
 // how would I access Ken's comment? by comments[1].text
 // LOOPS
+// Whole point of them is to have a repeat on code written, so instead of typing out the code over and over again, you can just do this more seamlessly
+
+// For loops
+// While loops
+// For and Of loop
+// Break keyword
+// Iterating objects
+// Nesting
