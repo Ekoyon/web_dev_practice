@@ -93,9 +93,33 @@ for ( let i = 1; i <= 10; i++){
 
 // exercise
 // Print out "Da ba dee da ba daa" 6 times, using a for loop
-for (let i = 1; i <= 6; i++) {
-    console.log("Da ba dee da ba Daa");
+//  for (let i = 1; i <= 6; i++) {
+//     console.log("Da ba dee da ba Daa");
+// }
+
+// more examples
+// printing out even numbers
+// for (let i = 0; i <= 20; i += 2) {
+//     console.log(i);
+// }
+
+// counting in tens from 100 to 10
+for (let i = 100; i >= 10; i -= 10) {
+    console.log(i);
 }
+// more practice
+// // Write a loop that prints:
+// // 25
+// // 20
+// // 15
+// // 10
+// // 5
+// // 0
+//
+// for ( let i = 25; i >= 0; i -= 5) {
+//     console.log(i);
+// }
+
 // While loops
 // For and Of loop
 // Break keyword
