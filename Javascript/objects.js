@@ -138,3 +138,6 @@ for (let i = 100; i >= 10; i -= 10) {
 // Break keyword
 // Iterating objects
 // Nesting
+for (let i=0; i < 5; i--) {
+
+}
