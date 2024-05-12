@@ -120,8 +120,24 @@ for (let i = 100; i >= 10; i -= 10) {
 //     console.log(i);
 // }
 
+// infinite loops
+// make sure at some point your loop stops
+
+// looping over arrays
+// remembering how each element has an index and so on.
+
+// exercise
+// const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"]; //DONT TOUCH THIS LINE!
+//
+// // WRITE YOUR LOOP BELOW THIS LINE
+// for (let i = 0; i < people.length; i++ ) {
+//     console.log(people[i].toUpperCase());
+// }
 // While loops
 // For and Of loop
 // Break keyword
 // Iterating objects
 // Nesting
+for (let i=0; i < 5; i--) {
+
+}
