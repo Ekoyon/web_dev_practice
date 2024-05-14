@@ -122,3 +122,9 @@ for (let i = 0; i < seatingChart.length; i++) {
 
 // while loop
 // you state a condition and while it is true, the loops
+let count = 0;
+while (count < 10) {
+    count++;
+    console.log(count)
+}
+// it's easier to do an infinite loop with while loop so be careful.
