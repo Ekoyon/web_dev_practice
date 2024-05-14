@@ -127,4 +127,4 @@ while (count < 10) {
     count++;
     console.log(count)
 }
-// it's easier to do n infinite loop with while loop so be careful.
+// it's easier to do an infinite loop with while loop so be careful.
