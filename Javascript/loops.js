@@ -150,3 +150,6 @@ while (true){
 console.log("Okay you win")
 
 // the break keyword basically lets you escape the loop.
+// it isn't streamlined to only while loops but runs on other loops also.
+
+//
