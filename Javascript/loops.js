@@ -139,3 +139,14 @@ while (guess !== secret) {
 console.log("Congrats, you're in");
 // this part only runs after the condition passes.
 // these are instances for which the while loop would be useful: in times where we have no idea how lon the iteration would go on for and all.
+
+
+// break keyword
+let input = prompt('say something!')
+while (true){
+    input = prompt(input);
+    if (input === "please quit copying me") break;
+}
+console.log("Okay you win")
+
+// the break keyword basically lets you escape the loop.
