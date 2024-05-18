@@ -122,39 +122,39 @@
 
 // while loop
 // you state a condition and while it is true, the loops
-let count = 0;
-while (count < 10) {
-    count++;
-    console.log(count)
-}
-// it's easier to do an infinite loop with while loop so be careful.
-// the example above is not where people use a while loop, we'd use it in an edxple, a chessgame that iterates
-
-const secret = "Hippopotemus";
-
-let guess = prompt("enter your secret code");
-while (guess !== secret) {
-    guess = prompt("enter a valid secret code");
-}
-console.log("Congrats, you're in");
-// this part only runs after the condition passes.
-// these are instances for which the while loop would be useful: in times where we have no idea how lon the iteration would go on for and all.
-
-
-// break keyword
-let input = prompt('say something!')
-while (true){
-    input = prompt(input);
-    if (input === "please quit copying me") break;
-}
-console.log("Okay you win")
-
-// the break keyword basically lets you escape the loop.
-// it isn't streamlined to only while loops but runs on other loops also.
-
-// let's write a guessing game.
-
-let maximum = parseInt(prompt("Enter the maximum number"));
-
-const targetNum = Math.floor(Math.random() * maximum) + 1
-console.log(targetNum);
+// let count = 0;
+// while (count < 10) {
+//     count++;
+//     console.log(count)
+// }
+// // it's easier to do an infinite loop with while loop so be careful.
+// // the example above is not where people use a while loop, we'd use it in an edxple, a chessgame that iterates
+//
+// const secret = "Hippopotemus";
+//
+// let guess = prompt("enter your secret code");
+// while (guess !== secret) {
+//     guess = prompt("enter a valid secret code");
+// }
+// console.log("Congrats, you're in");
+// // this part only runs after the condition passes.
+// // these are instances for which the while loop would be useful: in times where we have no idea how lon the iteration would go on for and all.
+//
+//
+// // break keyword
+// let input = prompt('say something!')
+// while (true){
+//     input = prompt(input);
+//     if (input === "please quit copying me") break;
+// }
+// console.log("Okay you win")
+//
+// // the break keyword basically lets you escape the loop.
+// // it isn't streamlined to only while loops but runs on other loops also.
+//
+// // let's write a guessing game.
+//
+// let maximum = parseInt(prompt("Enter the maximum number"));
+//
+// const targetNum = Math.floor(Math.random() * maximum) + 1
+// console.log(targetNum);
