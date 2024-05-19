@@ -165,8 +165,9 @@ console.log(targetNum);
 let guess = parseInt(prompt("Enter a guess!"));
 while (guess !== targetNum) {
     if (guess > targetNum) {
-        guess = prompt("Too high! Enter a new guess.")
+        guess = parseInt(prompt("Too high! Enter a new guess."));
     } else {
-        guess = prompt("Too low! Enter a new guess.")
+        guess = parseInt(prompt("Too low! Enter a new guess."));
     }
 }
+console.log("YOU GOT IT!")
