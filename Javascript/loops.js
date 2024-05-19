@@ -152,9 +152,21 @@
 // // the break keyword basically lets you escape the loop.
 // // it isn't streamlined to only while loops but runs on other loops also.
 //
-// // let's write a guessing game.
-//
-// let maximum = parseInt(prompt("Enter the maximum number"));
-//
-// const targetNum = Math.floor(Math.random() * maximum) + 1
-// console.log(targetNum);
+// let's write a guessing game.
+
+let maximum = parseInt(prompt("Enter the maximum number"));
+while (!maximum) {
+    maximum = parseInt(prompt("Enter a valid number "))
+}
+
+const targetNum = Math.floor(Math.random() * maximum) + 1
+console.log(targetNum);
+
+let guess = parseInt(prompt("Enter a guess!"));
+while (guess !== targetNum) {
+    if (guess > targetNum) {
+        guess = prompt("Too high! Enter a new guess.")
+    } else {
+        guess = prompt("Too low! Enter a new guess.")
+    }
+}
