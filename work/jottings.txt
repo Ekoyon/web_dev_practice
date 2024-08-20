@@ -1,0 +1,8 @@
+what is javascript?
+" it is a programming language made for the web"
+what is a javascript framework?
+"it is an abstraction on top of a programming language (in this case, javascript), that allows developers work and build stuff more efficiently and in less time"
+what is a programming language?
+"a group of token, keys and symbols that when combined together in a specific way can be translated by a compiler such that a computer understands it"
+
+javascript variables and datatypes:

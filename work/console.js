@@ -9,3 +9,9 @@ const randomClickFunction = function () {
   
   console.log("The user clicked and set the colort to" + randomColor);
   }
+
+  randomClickFunction();
+  htmlBody.onClick = randomClickFunction();
+
+  const myDate = new Date();
+  myDate.toISOString()
