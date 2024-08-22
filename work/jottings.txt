@@ -6,3 +6,6 @@ what is a programming language?
 "a group of token, keys and symbols that when combined together in a specific way can be translated by a compiler such that a computer understands it"
 
 javascript variables and datatypes:
+
+"everything is an object in javascript"
+you can't compare arrays and objects except using a library.
