@@ -60,4 +60,17 @@ if (20 === 20) {
 // true
 // it requires only one statement to be true
 
-//challenge
+// conditionals
+if ('some string' === "another string") {
+  console.log("equal strings");
+} else {
+  console.log("they're not requal");
+}
+// switch case
+// assuming we have an if-else statement like so:
+
+if (randomColor === "orange") {
+  console.log ("the color's orange") {
+    
+  }
+}
