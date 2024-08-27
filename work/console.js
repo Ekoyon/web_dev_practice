@@ -142,4 +142,59 @@ mySecondFunction(30, "hey hey hey");
 
 // scope
 // basically the range that a line of code or a variable has in the grand scheme of things
+// ways to write a function:
+// obviously the ones listed up above, and
+const trialFunction = justTrial () {
+  console.log("trying out stuff");
+}
 
+// arror functions
+const arrorFunction = () => {
+  console.log("an arrow function, wow");
+}
+
+arrorFunction();
+// it improves readability
+
+// return values
+const myArrorFunction = () => {
+  const i = 20;
+  return i;
+}
+const resultS = myArrorFunction();
+
+resultS;
+
+//objects and functions
+function jsFunction() {
+  return 20;
+}
+jsFunction();
+
+const myObj = {
+  prop1: 50,
+	prop2: jsFunction
+}
+
+// methods
+// string
+const aString = "Back"
+
+aString.replace('k', 'h');
+// to actually alter the stored string:
+const newString = aString.replace('k', 'h');
+
+//toUpperCase
+aString.toUpperCase();
+
+// switching a string to an array
+const str = "hello world";
+str.toUpperCase().split(" ")
+// the result is: Array [ "HELLO", "WORLD" ]
+
+// array methods
+const strringToArray = str.toUpperCase().split(" ");
+result.indexOf("WORLD")
+// the result is 1
+
+// coding challenges using code wars
