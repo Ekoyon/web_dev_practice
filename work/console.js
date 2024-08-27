@@ -70,7 +70,131 @@ if ('some string' === "another string") {
 // assuming we have an if-else statement like so:
 
 if (randomColor === "orange") {
-  console.log ("the color's orange") {
-    
+  console.log ("the color's orange"); 
+  } else if (randomColor === 'green') {
+    console.log("the color's green");
+  } else if (randomColor === "red") {
+    console.log ("the color's red")
+  } else {
+    console.log ("it's some color");
   }
+
+  // the same code in switch case
+  switch (randomColor) {
+    case 'orange':
+      console.log ("the color's orange");
+      break;
+    case 'green':
+      console.log ("the color's green");
+      break;
+    case 'red':
+      console.log ("the color's red");
+      break;
+    default:
+      console.log ("it's some color");
+  }
+
+  //loops
+  const blog = [
+    {
+      title: "what is javascript?",
+      author: "Avose Peace",
+      publishDate: "May 15, 2019",
+      content: "lots of words"
+    },
+    {
+      title: "Loops",
+      author: "Avose Peace",
+      publishDate: "September 3, 2024",
+      content: "words and codes"
+    }
+  ];
+
+  // for loops
+  for (let i = 0 < blog.length; i++) {
+    const postTitle = blog[i].title;
+    const postAuthor = blog[i].author;
+    const postContent = blog[i].content;
+
+    // print the variables
+    console.log(postTitle);
+    console.log(postAuthor);
+    console.log(postContent);
+  }
+
+// functions
+function myFunction (){
+  console.log("Hello world, my first function!!!!");
 }
+myFunction();
+
+// you could rewrite this a bit simpler:
+(function anotherFunction (){
+  console.log ("hola");
+}) ();
+
+// parameters and arguments
+function mySecondFunction (someNumber, someString) {
+  console.log(someNumber);
+  console.log(someString);
+}
+mySecondFunction(30, "hey hey hey");
+
+// scope
+// basically the range that a line of code or a variable has in the grand scheme of things
+// ways to write a function:
+// obviously the ones listed up above, and
+const trialFunction = justTrial () {
+  console.log("trying out stuff");
+}
+
+// arror functions
+const arrorFunction = () => {
+  console.log("an arrow function, wow");
+}
+
+arrorFunction();
+// it improves readability
+
+// return values
+const myArrorFunction = () => {
+  const i = 20;
+  return i;
+}
+const resultS = myArrorFunction();
+
+resultS;
+
+//objects and functions
+function jsFunction() {
+  return 20;
+}
+jsFunction();
+
+const myObj = {
+  prop1: 50,
+	prop2: jsFunction
+}
+
+// methods
+// string
+const aString = "Back"
+
+aString.replace('k', 'h');
+// to actually alter the stored string:
+const newString = aString.replace('k', 'h');
+
+//toUpperCase
+aString.toUpperCase();
+
+// switching a string to an array
+const str = "hello world";
+str.toUpperCase().split(" ")
+// the result is: Array [ "HELLO", "WORLD" ]
+
+// array methods
+const strringToArray = str.toUpperCase().split(" ");
+result.indexOf("WORLD")
+// the result is 1
+
+// coding challenges using code wars
