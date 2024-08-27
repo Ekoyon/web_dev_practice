@@ -70,7 +70,26 @@ if ('some string' === "another string") {
 // assuming we have an if-else statement like so:
 
 if (randomColor === "orange") {
-  console.log ("the color's orange") {
-    
+  console.log ("the color's orange"); 
+  } else if (randomColor === 'green') {
+    console.log("the color's green");
+  } else if (randomColor === "red") {
+    console.log ("the color's red")
+  } else {
+    console.log ("it's some color");
   }
-}
+
+  // the same code in switch case
+  switch (randomColor) {
+    case 'orange':
+      console.log ("the color's orange");
+      break;
+    case 'green':
+      console.log ("the color's green");
+      break;
+    case 'red':
+      console.log ("the color's red");
+      break;
+    default:
+      console.log ("it's some color");
+  }
