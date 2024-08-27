@@ -93,3 +93,53 @@ if (randomColor === "orange") {
     default:
       console.log ("it's some color");
   }
+
+  //loops
+  const blog = [
+    {
+      title: "what is javascript?",
+      author: "Avose Peace",
+      publishDate: "May 15, 2019",
+      content: "lots of words"
+    },
+    {
+      title: "Loops",
+      author: "Avose Peace",
+      publishDate: "September 3, 2024",
+      content: "words and codes"
+    }
+  ];
+
+  // for loops
+  for (let i = 0 < blog.length; i++) {
+    const postTitle = blog[i].title;
+    const postAuthor = blog[i].author;
+    const postContent = blog[i].content;
+
+    // print the variables
+    console.log(postTitle);
+    console.log(postAuthor);
+    console.log(postContent);
+  }
+
+// functions
+function myFunction (){
+  console.log("Hello world, my first function!!!!");
+}
+myFunction();
+
+// you could rewrite this a bit simpler:
+(function anotherFunction (){
+  console.log ("hola");
+}) ();
+
+// parameters and arguments
+function mySecondFunction (someNumber, someString) {
+  console.log(someNumber);
+  console.log(someString);
+}
+mySecondFunction(30, "hey hey hey");
+
+// scope
+// basically the range that a line of code or a variable has in the grand scheme of things
+

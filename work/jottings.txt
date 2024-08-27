@@ -9,3 +9,6 @@ javascript variables and datatypes:
 
 "everything is an object in javascript"
 you can't compare arrays and objects except using a library.
+you'll most likely never use switch statements
+why do we need loops? to reiterate over resources, eg database. it won't be efficient to print out all names in a db, before you find the one you actually need
+so instead of printing, you can just find and perform your desired operation
