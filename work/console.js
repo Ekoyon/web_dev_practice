@@ -198,3 +198,62 @@ result.indexOf("WORLD")
 // the result is 1
 
 // coding challenges using code wars
+// reversing a string
+// we first convert to an array before we do the reverse and then back
+function solution(str){
+  str.split("").reverse().join()
+}
+
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+function evenOrOdd(number) {
+  if(number % 2 === 0){
+    return "Even";
+  } else {
+    return "Odd";
+  }
+}
+
+// Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+function countSheeps(sheep) {
+  let count = 0;
+  for(let i = 0; i < sheep.length; i++) {
+    if(sheep[i] === true) {
+      count += 1;
+    }
+  }
+  return count;
+  // TODO
+}
+
+// Return the number (count) of vowels in the given string.
+
+//We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+//The input string will only consist of lower case letters and/or spaces.
+function getCount(str) {
+  let vowelCount = 0
+   const arr = str.split("");
+  
+  for(let i = 0; i< arr.length; i++){
+    switch (arr[i]){
+        case 'a':
+        vowelCount++;
+        break;
+        case 'e':
+        vowelCount++;
+        break;
+        case 'i':
+        vowelCount++;
+        break;
+        case 'o':
+        vowelCount++;
+        break;
+        case 'u':
+        vowelCount++;
+      
+        
+       
+    }
+  }
+  return vowelCount;
+}
