@@ -257,3 +257,37 @@ function getCount(str) {
   }
   return vowelCount;
 }
+
+// Jenny's secret message
+// mine:
+function greet(name){  
+  if(name === "Johnny")
+    return "Hello, my love!";
+  return "Hello, " + name + "!";
+}
+
+// Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
+function isDivisible(n, x, y) {
+  if (n % x === 0 && n % y === 0){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+//  In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+function makeNegative(num) {
+  if(num < 0){
+    return num;
+  } else {
+    return num * -1;
+  }
+}
+
+// Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0. Your function only needs to return the result, what is shown between parentheses in the example below is how you reach that result and it's not part of it, see the sample tests
+var summation = function (num) {
+  let sum = 0
+for (let i = 1; i <= num; i++){
+  sum += i ;
+} return sum;
+}
