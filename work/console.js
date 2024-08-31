@@ -291,3 +291,56 @@ for (let i = 1; i <= num; i++){
   sum += i ;
 } return sum;
 }
+
+// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+// Return the average of the given array rounded down to its nearest integer.
+
+// The array will never be empty.
+
+function getAverage(marks){
+  let sum = 0;
+
+  for (let i = 0; i < marks.length; i++){
+    sum = sum + marks[i]
+  }
+  return Math.floor(sum/marks.length);
+
+}
+
+//  Rock Paper Scissors
+// Let's play! You have to return which player won! In case of a draw return Draw!.
+const rps = (player1, player2) => {
+  if (player1 === 'rock'){
+    if (player2 === 'rock'){
+      return "Draw!"
+    } 
+    if (player2 === 'paper') {
+      return "Player 2 won!"
+    } else if (player2 === 'scissors') {
+      return "Player 1 won!"
+    }
+  }
+  
+  if (player1 === 'paper'){
+    if (player2 === 'rock'){
+      return "Player 1 won!"
+    } 
+    if (player2 === 'paper') {
+      return "Draw!"
+    } else if (player2 === 'scissors') {
+      return "Player 2 won!"
+    }
+  }
+  
+  if (player1 === 'scissors'){
+    if (player2 === 'rock'){
+      return "Player 2 won!"
+    } 
+    if (player2 === 'paper') {
+      return "Player 1 won!"
+    } else if (player2 === 'scissors') {
+      return "Draw!";
+    }
+  }
+};
