@@ -350,4 +350,7 @@ function removeChar(str){
   return str.substr(1, str.length -2)
  
  };
+
+ // at this pount, I'm 5 hours in, and 100% grateful.
+ // no real code today becausee i don't feel so good, but I'm very grateful.
   
