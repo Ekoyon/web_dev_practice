@@ -351,6 +351,103 @@ function removeChar(str){
  
  };
 
- // at this pount, I'm 5 hours in, and 100% grateful.
- // no real code today becausee i don't feel so good, but I'm very grateful.
+ // You get an array of numbers, return the sum of all of the positives ones.
+
+// Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+// Note: if there is nothing to sum, the sum is default to 0.
+
+function positiveSum(arr) {
+  let positiveSum = 0;
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] > 0){
+      positiveSum = positiveSum + arr[i];
+    }
+  } return positiveSum;
+}
+
+// Your task is to create a function that does four basic mathematical operations.
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+function basicOp(operation, value1, value2){
+  let results;
+  switch(operation){
+      case '+':
+      results = value1 + value2;
+      break;
+      case '-':
+      results = value1 - value2;
+      break;
+      case '/':
+      results = value1 / value2;
+      break;
+      case '*':
+      results = value1 * value2;
+      break;
+  }
+  return results;
+}
+
+// Write a function to split a string and convert it into an array of words.
+function stringToArray(string){
+  return string.split(" ");
+}
+
+// Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+// Given an array of integers, return a new array with each value doubled.
+
+// For example:
+
+// [1, 2, 3] --> [2, 4, 6]
+function maps(x){
+  const modified = x.map(function(element){
+    return element * 2;
+  });
+    return modified;
+  }
+
+  // remove string spaces
+  function noSpace(x){
+    const arr = x.split(" ");
+    let newArr = [];
+
+    for(let i = 0; i < x.length; i++){
+        const trimmedStr = arr[i].trim();
+        newArr.push(trimmedStr);
+    }
+    const finalStri = newArr.join("");
+    return finalStri;
+  }
+
+//   A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+// Return true if yes, false otherwise :)
+
+function hero(bullets, dragons){
   
+  if (bullets >= dragons * 2){
+    return true;
+  } else {
+    return false;
+  }
+  }
+
+  // I'm new to coding and now I want to get the sum of two arrays... Actually the sum of all their elements. I'll appreciate for your help.
+
+  // P.S. Each array includes only integer numbers. Output is a number too.  
+function arrayPlusArray(arr1, arr2) {
+  let add = 0
+  for (let i =0; i < arr1.length; i++){
+    const arr1Value = arr1[i];
+    const arr2Value = arr2[i];
+    
+    const addition = arr1Value + arr2Value;
+     add = add + addition;
+  }
+  return add
+}
