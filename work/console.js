@@ -514,3 +514,22 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 // if x = y: 1 point (tie)
 // We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
 
+function points(games) {
+  let totalPoints = 0;
+  
+  for (let i = 0; i < games.length; i++) {
+    const value = games[i];
+    const teamXorY = value.split(":");
+    
+    const x = teamXorY[0];
+        const y = teamXorY[1];
+
+    if (x > y) {
+      totalPoints += 3;
+    } else if (x === y){
+      totalPoints += 1;
+    }
+  }
+  
+  return totalPoints;
+}
