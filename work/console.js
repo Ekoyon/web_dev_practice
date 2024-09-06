@@ -533,3 +533,6 @@ function points(games) {
   
   return totalPoints;
 }
+
+// Javascript utility methods
+// callback functions

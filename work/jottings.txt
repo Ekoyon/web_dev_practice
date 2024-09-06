@@ -14,3 +14,7 @@ why do we need loops? to reiterate over resources, eg database. it won't be effi
 so instead of printing, you can just find and perform your desired operation
 
 today: I run the 25 challenges on code wars, they're fun.
+
+.pop() array method
+it removes an element from the array, the last element
+.includes()
