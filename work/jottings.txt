@@ -18,3 +18,6 @@ today: I run the 25 challenges on code wars, they're fun.
 .pop() array method
 it removes an element from the array, the last element
 .includes()
+
+callback functions are functions that are passed as an argument to another function.
+They allow you to call a function from another function.

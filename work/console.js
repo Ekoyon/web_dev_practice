@@ -536,3 +536,19 @@ function points(games) {
 
 // Javascript utility methods
 // callback functions
+// let randomNumber = 20;
+function myCallback(someNumbr) {
+  return someNumbr + 2;
+}
+
+function mainFunction(randomNumber, shouldCall, callback) {
+  let resullt = randomNumber;
+if(shouldCall) {
+  resullt = callback(randomNumber);
+} return resullt;
+}
+
+mainFunction(20, true, myCallback);
+
+// taking a breather, we can understand the need for callback functions from thee .map method.
+// according to mdn, .map() array method creates a new array populated with the results of calling
