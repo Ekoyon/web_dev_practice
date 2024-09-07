@@ -514,3 +514,41 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 // if x = y: 1 point (tie)
 // We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
 
+function points(games) {
+  let totalPoints = 0;
+  
+  for (let i = 0; i < games.length; i++) {
+    const value = games[i];
+    const teamXorY = value.split(":");
+    
+    const x = teamXorY[0];
+        const y = teamXorY[1];
+
+    if (x > y) {
+      totalPoints += 3;
+    } else if (x === y){
+      totalPoints += 1;
+    }
+  }
+  
+  return totalPoints;
+}
+
+// Javascript utility methods
+// callback functions
+// let randomNumber = 20;
+function myCallback(someNumbr) {
+  return someNumbr + 2;
+}
+
+function mainFunction(randomNumber, shouldCall, callback) {
+  let resullt = randomNumber;
+if(shouldCall) {
+  resullt = callback(randomNumber);
+} return resullt;
+}
+
+mainFunction(20, true, myCallback);
+
+// taking a breather, we can understand the need for callback functions from thee .map method.
+// according to mdn, .map() array method creates a new array populated with the results of calling
