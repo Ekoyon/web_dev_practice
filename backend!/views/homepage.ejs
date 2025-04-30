@@ -4,24 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h2><a href="/">The App</a></h2>
         <nav>
-            <a href="#">Log In</a>
+            <a href="/login">Log In</a>
         </nav>
     </header>
 
     <main>
-        <h3>Home Page</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores cupiditate dicta quam ratione minus, hic recusandae? Corporis commodi voluptates accusantium distinctio et, aperiam, cumque accusamus aut explicabo similique fugit.</p>
+        <form action="/register" method="POST">
+    <fieldset>
+        <legend>Create an account</legend>
+        <label for="Username"><small>Username</small></label>
+        <input type="text" id="username" name="username" autocomplete="off">
+
+        <label for="password"><small>Password</small></label>
+        <input type="password" id="password" name="password" autocomplete="off">
+        
+        <br />
+        <button>Sign Up</button>
+  
+    </fieldset>    
+</form>
     </main>
 
     <footer>
         <small>&copy: This whole App</small>
     </footer>
-    
+
 </body>
 </html>
