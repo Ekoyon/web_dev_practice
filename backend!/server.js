@@ -1,8 +1,13 @@
 const express = require("express")
 const app = express()
 
-app.get("/", (req, res) => {
-    res.send("Hi, from my cool app!")
-})
 
-app.listen(3000)
+app.set("View Engine", "ejs")
+
+app.use(express.static("public"))
+
+app.get("/", (req, res) => {
+    res.render("homepage.ejs")
+});
+
+app.listen(3000);
