@@ -178,3 +178,11 @@ if (guess === 'q') {
     console.log('oh wow, you got it.')
     console.log(`You got it! it only took ${attempts} guesses`)
 }
+
+// for-of statement
+// it is good for scenerios where you don't need the index of elements in an array that you'd like to loop over.
+const seatingChart = [
+    ['Kristen', 'Erik', 'Namita'],
+    ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+    ['Yuma', 'Yuto', 'Sakute', 'Jack', 'Kim']
+]
