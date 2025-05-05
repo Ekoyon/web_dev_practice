@@ -1,10 +1,16 @@
 const express = require("express")
 const app = express()
-
+const db = require("better-sqlite3")("app_db")
+db.pragma("journal_mode = WAL")
 
 app.set("View Engine", "ejs")
 app.use(express.urlencoded({extended: false}))
 app.use(express.static("public"))
+
+app.use(function (req, res, next) {
+    res.locals.errors = []
+    next()
+})
 
 app.get("/", (req, res) => {
     res.render("homepage.ejs")
@@ -39,8 +45,25 @@ app.post("/register", (req, res) => {
         errors.push("Username should contain letters and numbers")
     }
 
-    if(req.body.username)
-    res.send("Saved! You now have an account")
+    if(req.body.password && req.body.password.length < 12){
+        errors.push("Password cannot be less than 12 characters")
+    }
+
+    if(req.body.password && req.body.password.length > 20){
+        errors.push("Password cannot be more than 20 characters")
+    }
+
+    if (errors.length) {
+        return res.render("homepage", { errors })
+    } 
+
+    //save the user into a db
+    // we'll be using sqllite
+
+    // log the user in by giving them a cookie
+    if(req.body.username) {
+        res.send("Saved! You now have an account")
+    }
 })
 
 app.listen(3000);
