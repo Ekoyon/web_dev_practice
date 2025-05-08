@@ -1,8 +1,25 @@
+const bcrypt = require("bcrypt")
 const express = require("express")
 const app = express()
-const db = require("better-sqlite3")("app_db")
+const db = require("better-sqlite3")("app.db")
 db.pragma("journal_mode = WAL")
 
+// db setup, table for users and password
+
+const createTables = db.transaction(() => {
+    db.prepare(
+        `
+        CREATE TABLE IF NOT EXISTS users (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username STRING NOT NULL UNIQUE,
+        password STRING NOT NULL)
+        `
+    ).run()
+})
+
+createTables()
+
+//db setup ends here
 app.set("View Engine", "ejs")
 app.use(express.urlencoded({extended: false}))
 app.use(express.static("public"))
@@ -41,7 +58,7 @@ app.post("/register", (req, res) => {
         errors.push("Username cannot be more than 10 characters")
     }
 
-    if(req.body.username && !req.body.username.match( /^[a-zA-Z0-9]/+$ )) {
+    if(req.body.username && !req.body.username.match( /^[a-zA-Z0-9]+$/)) {
         errors.push("Username should contain letters and numbers")
     }
 
@@ -54,10 +71,12 @@ app.post("/register", (req, res) => {
     }
 
     if (errors.length) {
-        return res.render("homepage", { errors })
+        return res.render("homepage.ejs", { errors })
     } 
 
     //save the user into a db
+    const aPrepareStatement = db.prepare("INSERT INTO users (username, password) VALUES (?, ?)")
+    aPrepareStatement.run(req.body.username, req.body.password)
     // we'll be using sqllite
 
     // log the user in by giving them a cookie
