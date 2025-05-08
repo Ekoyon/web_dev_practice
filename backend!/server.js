@@ -1,3 +1,5 @@
+require("dotenv").config()
+const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
 const express = require("express")
 const app = express()
@@ -75,11 +77,29 @@ app.post("/register", (req, res) => {
     } 
 
     //save the user into a db
+
+    const encrypt = bcrypt.genSaltSync(10)
+    req.body.password = bcrypt.hashSync(req.body.password, encrypt)
+
+
     const aPrepareStatement = db.prepare("INSERT INTO users (username, password) VALUES (?, ?)")
-    aPrepareStatement.run(req.body.username, req.body.password)
+    const value = aPrepareStatement.run(req.body.username, req.body.password)
+
+    const whatsTheValue = db.prepare("SELECT * FROM users WHERE ROWID = ?")
+
+    const specificUser = whatsTheValue.get(value.lastInsertRowid)
     // we'll be using sqllite
 
     // log the user in by giving them a cookie
+    const ourTokenValue = jwt.sign({exp: Math.floor(Date.now() / 1000) + 60 * 60 
+        * 24, random: "...", userid: specificUser.id, username: specificUser.username}, ProcessingInstruction.env.JWTSECRET)
+
+    res.cookie("ourSimpleApp", ourTokenValue, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+        maxAge: 1000 * 60 * 60 * 24
+    })
     if(req.body.username) {
         res.send("Saved! You now have an account")
     }
