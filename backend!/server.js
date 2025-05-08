@@ -1,6 +1,7 @@
 require("dotenv").config()
 const jwt = require("jsonwebtoken")
 const bcrypt = require("bcrypt")
+const cookieParser = require("cookie-parser")
 const express = require("express")
 const app = express()
 const db = require("better-sqlite3")("app.db")
@@ -25,11 +26,23 @@ createTables()
 app.set("View Engine", "ejs")
 app.use(express.urlencoded({extended: false}))
 app.use(express.static("public"))
+app.use(cookieParser())
 
 app.use(function (req, res, next) {
     res.locals.errors = []
+    // try to decode incoming cookie
+
+try{
+    const decoded = jwt.verify(req.cookies.ourSimpleApp, process.env.JWTSECRET)
+    req.user = decoded
+} catch(err) {
+    req.user = false
+}
+res.locals.user = req.user
+console.log(req.user)
     next()
 })
+
 
 app.get("/", (req, res) => {
     res.render("homepage.ejs")
@@ -91,8 +104,7 @@ app.post("/register", (req, res) => {
     // we'll be using sqllite
 
     // log the user in by giving them a cookie
-    const ourTokenValue = jwt.sign({exp: Math.floor(Date.now() / 1000) + 60 * 60 
-        * 24, random: "...", userid: specificUser.id, username: specificUser.username}, ProcessingInstruction.env.JWTSECRET)
+    const ourTokenValue = jwt.sign({exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24, random: "...", userid: specificUser.id, username: specificUser.username}, process.env.JWTSECRET)
 
     res.cookie("ourSimpleApp", ourTokenValue, {
         httpOnly: true,
