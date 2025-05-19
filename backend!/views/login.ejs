@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <%- include('includes/head.ejs') %>
 <body>
-    <header>
-        <h2><a href="/">The App</a></h2>
-        <nav>
-            <a href="/Login">Log In</a>
-        </nav>
-    </header>
+    <%- include('includes/header.ejs') %>
 
     <main>
-        <h3>Login Page</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae maiores cupiditate dicta quam ratione minus, hic recusandae? Corporis commodi voluptates accusantium distinctio et, aperiam, cumque accusamus aut explicabo similique fugit.</p>
+        <form action="/login" method="POST">
+            <% errors.forEach(error => { %>
+                <p class="notice"><%= errors %></p>
+           <% }) %>
+    <fieldset>
+        <legend>Log In</legend>
+        <label for="Username"><small>Username</small></label>
+        <input type="text" id="username" name="username" autocomplete="off">
+
+        <label for="password"><small>Password</small></label>
+        <input type="password" id="password" name="password" autocomplete="off">
+        
+        <br />
+        <button>Log In</button>
+  
+    </fieldset>    
+</form>
     </main>
 
-    <footer>
-        <small>&copy: This whole App</small>
-    </footer>
+    <%- include('includes/footer.ejs') %>
 
 </body>
 </html>
