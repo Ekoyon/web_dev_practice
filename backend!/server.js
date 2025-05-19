@@ -45,13 +45,66 @@ console.log(req.user)
 
 
 app.get("/", (req, res) => {
+    if(req.user){
+        return res.render("dashboard.ejs")
+    }
+    
     res.render("homepage.ejs")
 });
 
 app.get("/login", (req, res) => {
+    
     res.render("login.ejs")
 })
 
+app.post("/login", (req, res) => {
+    let errors = []
+
+    if(typeof req.body.username !== "string") req.body.username = ""
+
+    if(typeof req.body.password !== "string") req.body.password = ""
+
+    if(req.body.username.trim() == "") errors = ["Invalid Username/Password"]
+    if(req.body.password == "") errors = ["Invalid Username/Password"]
+
+    if (errors.length) {
+        return res.length("login", {errors})
+
+    //compare to see if password matches the one on the db
+    const userInQuestionStatement = db.prepare("SELECT * FROM users WHERE USERNAME = ?")
+    const userInQuestion = userInQuestionStatement.get(req.body.username)
+
+    if(!userInQuestion) {
+        errors = ["Invalid Username/Password"]
+        return res.render("login", {errors})
+    }
+
+    const matchOrNot = bcrypt.compareSync(req.body.password, userInQuestion.password)
+    if (!matchOrNot){
+        errors = ["Invalid Username/Password"]
+        return res.render("login", {errors})
+    }
+
+    //if it's a match, redirect to homepage after giving a cookie
+    const ourTokenValue = jwt.sign({exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24, random: "...", userid: userInQuestion.id, username: userInQuestion.username}, process.env.JWTSECRET)
+
+    res.cookie("ourSimpleApp", ourTokenValue, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "strict",
+        maxAge: 1000 * 60 * 60 * 24
+    })
+    if(req.body.username) {
+        res.redirect("/")
+    }
+
+    }
+    res.send("Thank you.")
+})
+app.get("/logout", (req, res) => {
+    res.clearCookie("ourSimpleApp")
+    res.redirect("/")
+})
 app.post("/register", (req, res) => {
     const errors = []
 
@@ -76,7 +129,15 @@ app.post("/register", (req, res) => {
     if(req.body.username && !req.body.username.match( /^[a-zA-Z0-9]+$/)) {
         errors.push("Username should contain letters and numbers")
     }
+// so we can ensure username is unique and not a sqlite error shows
+    const usernameStatement = db.prepare("SELECT * FROM users WHERE username = ?")
+    const usernameCheck = usernameStatement.get(req.body.username)
 
+    if(usernameCheck) errors.at
+    
+    
+    .push("Username has to be Unique")
+    
     if(req.body.password && req.body.password.length < 12){
         errors.push("Password cannot be less than 12 characters")
     }
@@ -113,7 +174,7 @@ app.post("/register", (req, res) => {
         maxAge: 1000 * 60 * 60 * 24
     })
     if(req.body.username) {
-        res.send("Saved! You now have an account")
+        res.redirect("/")
     }
 })
 
