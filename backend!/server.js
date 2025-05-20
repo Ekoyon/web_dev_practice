@@ -1,5 +1,6 @@
 require("dotenv").config()
 const jwt = require("jsonwebtoken")
+const sanitizeHTML = require("sanitize-html")
 const bcrypt = require("bcrypt")
 const cookieParser = require("cookie-parser")
 const express = require("express")
@@ -176,6 +177,34 @@ app.post("/register", (req, res) => {
     if(req.body.username) {
         res.redirect("/")
     }
+})
+//creating a middleware: basically a reusable function to verify if a user is logged in before they can create a post
+function mustBeLoggedIn(req, res, next) {
+    if (req.user) {
+        return next()
+    }
+    return res.redirect("/")
+}
+app.get("/create-post", mustBeLoggedIn, (req, res) =>{
+    res.render("create-post")
+})
+
+function sharedPostValidation(req) {
+    const errors = []
+    if(typeof req.body.title !== "string") req.body.title = ""
+    if(typeof req.body.body !== "string") req.body.body = ""
+
+    // to trim or sanitize out html
+    req.body.title = sanitizeHTML(req.body.title.trim(), {allowedTags: [], allowedAttributes: {}})
+    req.body.body = sanitizeHTML(req.body.body.trim(), {allowedTags: [], allowedAttributes: {}})
+
+    // make sure they ain't empty
+    if(!req.body.title) errors.push("You must provide a title")
+    return errors
+}
+app.post("/create-post", mustBeLoggedIn, (req, res) =>{
+    //check for validation errors and clean up post
+    const errors = sharedPostValidation(req)
 })
 
 app.listen(3000);
