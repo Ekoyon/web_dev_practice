@@ -19,6 +19,18 @@ const createTables = db.transaction(() => {
         password STRING NOT NULL)
         `
     ).run()
+
+    db.prepare(
+        `
+        CREATE TABLE IF NOT EXISTS posts (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        createdDate TEXT,
+        title STRING NOT NULL,
+        body TEXT NOT NULL,
+        authorid INTEGER,
+        FOREIGN KEY (authorid) REFERENCES users (id)
+        )
+        `).run()
 })
 
 createTables()
@@ -70,7 +82,7 @@ app.post("/login", (req, res) => {
 
     if (errors.length) {
         return res.length("login", {errors})
-
+    }
     //compare to see if password matches the one on the db
     const userInQuestionStatement = db.prepare("SELECT * FROM users WHERE USERNAME = ?")
     const userInQuestion = userInQuestionStatement.get(req.body.username)
@@ -99,7 +111,7 @@ app.post("/login", (req, res) => {
         res.redirect("/")
     }
 
-    }
+    
     res.send("Thank you.")
 })
 app.get("/logout", (req, res) => {
@@ -134,10 +146,7 @@ app.post("/register", (req, res) => {
     const usernameStatement = db.prepare("SELECT * FROM users WHERE username = ?")
     const usernameCheck = usernameStatement.get(req.body.username)
 
-    if(usernameCheck) errors.at
-    
-    
-    .push("Username has to be Unique")
+    if(usernameCheck) errors.push("Username has to be Unique")
     
     if(req.body.password && req.body.password.length < 12){
         errors.push("Password cannot be less than 12 characters")
@@ -186,7 +195,7 @@ function mustBeLoggedIn(req, res, next) {
     return res.redirect("/")
 }
 app.get("/create-post", mustBeLoggedIn, (req, res) =>{
-    res.render("create-post")
+    res.render("create-post.ejs")
 })
 
 function sharedPostValidation(req) {
@@ -200,11 +209,39 @@ function sharedPostValidation(req) {
 
     // make sure they ain't empty
     if(!req.body.title) errors.push("You must provide a title")
+    if(!req.body.body) errors.push("You must provide a content in this field.")
+
     return errors
 }
+
+app.get("/post/:id", (req, res) =>{
+    const dashboardStatement = db.prepare("SELECT * FROM posts WHERE id = ?")
+    const post = dashboardStatement.get(req.params.id)
+
+    if(!post) {
+        return res.redirect("/")
+    }
+
+    res.render("single-post.ejs", { post })
+})
 app.post("/create-post", mustBeLoggedIn, (req, res) =>{
     //check for validation errors and clean up post
     const errors = sharedPostValidation(req)
+
+    if(errors.length) {
+        return res.render("create-post.ejs", {errors})
+    }
+
+    //if no errords, save to db
+    const dbStatement = db.prepare("INSERT INTO posts (title, body, authorid, createdDate) VALUES (?, ?, ?, ?)")
+    const result = dbStatement.run(req.body.title, req.body.body, req.user.userid, new Date().toISOString())
+
+
+    const getPost = db.prepare("SELECT * FROM posts WHERE ROWID = ?")
+    const actualPost = getPost.get(result.lastInsertRowid)
+
+    res.redirect(`/post/${actualPost.id}`)
+    
 })
 
 app.listen(3000);
