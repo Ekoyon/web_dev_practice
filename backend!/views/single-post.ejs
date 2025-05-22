@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('includes/head.ejs') %>
+    <%- include("includes/head.ejs") %>
 <body>
-    <%- include('includes/header.ejs') %>
+    <%- include("includes/header.ejs") %>
 
     <main>
         <h1><%= post.title %></h1>
+
+        <article>
+            <small>Posted by <%= post.username %> on <%= new Date(post.createdDate).getDay() %>/<%= new Date(post.createdDate).getMonth() + 1 %>/<%= new Date(post.createdDate).getFullYear() %></small>
+            <!-- since the posts table in the db doesn't have username column, to get this username, we have to use autorid to access userid and then username -->
+            <div>
+                <%= post.body%>
+            </div>
+        </article>
+        <a href="#">Edit Post</a>
     </main>
 
-    <%- include('includes/footer.ejs') %>
+    <%- include("includes/footer.ejs") %>
 
 </body>
 </html>

@@ -59,7 +59,10 @@ console.log(req.user)
 
 app.get("/", (req, res) => {
     if(req.user){
-        return res.render("dashboard.ejs")
+        const postsViewStatement = db.prepare("SELECT * FROM posts WHERE authorid = ?")
+        const posts = postsViewStatement.all(req.user.userid) 
+        // .all is similar to .get but returns more results, an array instead of just objects
+        return res.render("dashboard.ejs", {posts})
     }
     
     res.render("homepage.ejs")
@@ -215,7 +218,7 @@ function sharedPostValidation(req) {
 }
 
 app.get("/post/:id", (req, res) =>{
-    const dashboardStatement = db.prepare("SELECT * FROM posts WHERE id = ?")
+    const dashboardStatement = db.prepare("SELECT posts.*, users.username FROM posts INNER JOIN users ON posts.authorid = users.id WHERE posts.id = ?")
     const post = dashboardStatement.get(req.params.id)
 
     if(!post) {

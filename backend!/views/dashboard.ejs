@@ -6,7 +6,11 @@
 
     <main>
         <h2>Welcome to your dashboard</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad neque non, esse autem dolores nulla, et quia recusandae quo possimus quidem omnis quas magni pariatur suscipit aperiam consectetur consequuntur perferendis?</p>
+        <ul>
+            <% posts.forEach(post => { %>
+                 <li><a href="/post/<%= post.id %>"><%= post.title %></a> on <%= new Date(post.createdDate).getDay() %>/<%= new Date(post.createdDate).getMonth() + 1 %>/<%= new Date(post.createdDate).getFullYear() %></li>
+         <%   }) %>
+        </ul>
     </main>
 
     <%- include('includes/footer.ejs') %>
