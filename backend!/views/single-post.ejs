@@ -14,7 +14,10 @@
                 <%= post.body%>
             </div>
         </article>
-        <a href="#">Edit Post</a>
+        <a href="/edit-post/<%= post.id %>" class="button">Edit Post</a>
+        <form style="display: inline;" action="/delete-post/<%= post.id %>" method="POST">
+            <button>Delete Post</button>
+        </form>
     </main>
 
     <%- include("includes/footer.ejs") %>

@@ -4,6 +4,7 @@ const sanitizeHTML = require("sanitize-html")
 const bcrypt = require("bcrypt")
 const cookieParser = require("cookie-parser")
 const express = require("express")
+// const { redirect } = require("react-router-dom")
 const app = express()
 const db = require("better-sqlite3")("app.db")
 db.pragma("journal_mode = WAL")
@@ -226,6 +227,18 @@ app.get("/post/:id", (req, res) =>{
     }
 
     res.render("single-post.ejs", { post })
+})
+app.get("/edit-post/:id", (req, res) => {
+    // let's find the post first
+    const editStatement = db.prepare("SELECT * FROM posts WHERE id =?")
+    const editPostStatement = editStatement.get(req.params.id)
+
+    // if not author, redirect to homepage
+    if(editPostStatement.authorid !== req.user.userid){
+        return redirect("/")
+    }
+    // or not, then render the edit post page
+    // res.render("edit-post.ejs", {post})
 })
 app.post("/create-post", mustBeLoggedIn, (req, res) =>{
     //check for validation errors and clean up post
