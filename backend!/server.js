@@ -2,6 +2,7 @@ require("dotenv").config()
 const jwt = require("jsonwebtoken")
 const sanitizeHTML = require("sanitize-html")
 const bcrypt = require("bcrypt")
+const marked = require("marked")
 const cookieParser = require("cookie-parser")
 const express = require("express")
 // const { redirect } = require("react-router-dom")
@@ -43,6 +44,13 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 app.use(function (req, res, next) {
+    //make our markdown function available
+    res.locals.allowMarkdown = function(content){
+        return sanitizeHTML(marked.parse(content), {
+            allowedTags: ["p", "br", "ul", "li", "ol", "strong", "bold", "i", "em", "h1", "h2", "h3", "h4", "h5", "h6", "h7"],
+            aalowedAttributes: {}
+        })
+    }
     res.locals.errors = []
     // try to decode incoming cookie
 
@@ -60,7 +68,7 @@ console.log(req.user)
 
 app.get("/", (req, res) => {
     if(req.user){
-        const postsViewStatement = db.prepare("SELECT * FROM posts WHERE authorid = ?")
+        const postsViewStatement = db.prepare("SELECT * FROM posts WHERE authorid = ? ORDER BY createdDate DESC")
         const posts = postsViewStatement.all(req.user.userid) 
         // .all is similar to .get but returns more results, an array instead of just objects
         return res.render("dashboard.ejs", {posts})
@@ -226,19 +234,72 @@ app.get("/post/:id", (req, res) =>{
         return res.redirect("/")
     }
 
-    res.render("single-post.ejs", { post })
+    // let's know if this is the author so then we can display the buttons
+    const isAuthor = post.authorid === req.user.userid
+
+    res.render("single-post.ejs", { post, isAuthor })
 })
-app.get("/edit-post/:id", (req, res) => {
+
+app.get("/edit-post/:id", mustBeLoggedIn, (req, res) => {
     // let's find the post first
     const editStatement = db.prepare("SELECT * FROM posts WHERE id =?")
-    const editPostStatement = editStatement.get(req.params.id)
+    const post = editStatement.get(req.params.id)
 
-    // if not author, redirect to homepage
-    if(editPostStatement.authorid !== req.user.userid){
-        return redirect("/")
+    // let's also check to see if post even exists
+    if(!post) {
+        return res.redirect("/")
     }
+    // if not author, redirect to homepage
+    if(post.authorid !== req.user.userid){
+        return res.redirect("/")
+    }
+    
     // or not, then render the edit post page
-    // res.render("edit-post.ejs", {post})
+    res.render("edit-post.ejs", { post })
+})
+app.post("/edit-post/:id", mustBeLoggedIn, (req, res) => {
+    // let's find the post first
+    const editStatement = db.prepare("SELECT * FROM posts WHERE id =?")
+    const post = editStatement.get(req.params.id)
+
+    // let's also check to see if post even exists
+    if(!post) {
+        return res.redirect("/")
+    }
+    // if not author, redirect to homepage
+    if(post.authorid !== req.user.userid){
+        return res.redirect("/")
+    }
+
+    const errors = sharedPostValidation(req)
+
+    if (errors.length) {
+        return res.render("edit-post.ejs", {errors})
+    }
+
+    const updateStatement = db.prepare("UPDATE posts SET title = ?, body = ? WHERE id = ?")
+    updateStatement.run(req.body.title, req.body.body, req.params.id)
+
+    res.redirect(`/post/${req.params.id}`)
+})
+app.post("/delete-post/:id", mustBeLoggedIn, (req, res) => {
+    // let's find the post first
+    const editStatement = db.prepare("SELECT * FROM posts WHERE id =?")
+    const post = editStatement.get(req.params.id)
+
+    // let's also check to see if post even exists
+    if(!post) {
+        return res.redirect("/")
+    }
+    // if not author, redirect to homepage
+    if(post.authorid !== req.user.userid){
+        return res.redirect("/")
+    }
+
+    const deleteStatement = db.prepare("DELETE FROM posts WHERE id = ?")
+    deleteStatement.run(req.params.id)
+
+    res.redirect("/")
 })
 app.post("/create-post", mustBeLoggedIn, (req, res) =>{
     //check for validation errors and clean up post
@@ -248,7 +309,7 @@ app.post("/create-post", mustBeLoggedIn, (req, res) =>{
         return res.render("create-post.ejs", {errors})
     }
 
-    //if no errords, save to db
+    //if no errors, save to db
     const dbStatement = db.prepare("INSERT INTO posts (title, body, authorid, createdDate) VALUES (?, ?, ?, ?)")
     const result = dbStatement.run(req.body.title, req.body.body, req.user.userid, new Date().toISOString())
 

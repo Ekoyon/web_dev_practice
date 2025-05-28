@@ -5,7 +5,7 @@
     <%- include('includes/header.ejs') %>
 
     <main>
-        <form action="/edit-post" method="POST">
+        <form action="/edit-post/<%= post.id %>" method="POST">
             <% errors.forEach(error => { %>
                 <p class="notice"><%= errors %></p>
            <% }) %>
@@ -18,7 +18,7 @@
         <textarea name="body" id="body"><%= post.body %></textarea>
         
         <br />
-        <button>Save Changes</button>
+        <button >Save Changes</button>
   
     </fieldset>    
 </form>
