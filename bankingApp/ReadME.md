@@ -1,1 +1,0 @@
-For this app, we use React, NEXTJS, SandBox, Plaid for banking functionalities, appwrite for the backend, chart.js for charts, sentry for monitoring, tailwindcss and shaden as a library on top of tailwind
